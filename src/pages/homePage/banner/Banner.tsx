@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div>
       banner
-      <button>Arlenbek</button>
+      <button>Iskhak</button>
     </div>
   );
 };
