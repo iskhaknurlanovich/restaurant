@@ -1,13 +1,11 @@
 import { FC } from "react";
-import scss from "./Home.module.scss";
+import Banner from "./banner/Banner";
 
 const Home: FC = () => {
   return (
-    <section className={scss.Home}>
-      <div className="container">
-        <div className={scss.content}>Home</div>
-      </div>
-    </section>
+    <div>
+      <Banner />
+    </div>
   );
 };
 
