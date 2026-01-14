@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 import "./globals.css";
 import Header from "../widgets/header/Header";
 import Footer from "../widgets/footer/Footer";
 
-const inter = Inter({
-  subsets: ["latin", "latin-ext"],
-});
+const spartan = League_Spartan();
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${spartan.className}`}>
         <div className="layout">
           <Header />
           {children}

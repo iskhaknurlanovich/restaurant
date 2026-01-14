@@ -1,0 +1,85 @@
+.menuSlider {
+  display: flex;
+  gap: 5rem;
+  width: 100%;
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 270px;
+    border: 0.3px solid rgba(255, 255, 255, 0.208);
+
+    button {
+      background-color: #1f2731;
+      color: white;
+      cursor: pointer;
+      border: none;
+      font-size: 20px;
+      position: relative;
+      padding-block: 12px;
+      flex: 1;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 20%; // отступ от начала
+        right: 20%; // отступ от конца
+        height: 1px;
+        background-color: #ffffff6c;
+      }
+      &:last-child::after {
+        content: none;
+      }
+    }
+
+    .active {
+      transition: 0.4s ease-out;
+      background-color: #ef272c;
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  .sliderContainer {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    flex: 1;
+    .menuList {
+      font-size: 30px;
+      position: absolute;
+      width: 100%;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .slideOut {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    .slideIn {
+      transform: translateY(100%);
+      opacity: 0;
+      animation: slideUp 0.4s forwards;
+    }
+
+    .visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

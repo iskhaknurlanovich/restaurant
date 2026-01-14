@@ -1,16 +1,19 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
 }
 .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1080px;
   margin: 0 auto;
 }
-
+body {
+  background-color: #1b2026;
+  color: white;
+}
 .layout {
   display: flex;
   flex-direction: column;
@@ -19,4 +22,16 @@
   footer {
     margin-top: auto;
   }
+}
+.subtitle {
+  font-family: "Shalimar", cursive;
+}
+a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+.logo {
+  letter-spacing: -1;
+  font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
 }

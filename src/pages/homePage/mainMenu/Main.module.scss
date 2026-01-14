@@ -1,0 +1,33 @@
+.main {
+  padding-block: 40px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      h1 {
+        font-family: "Shalimar";
+        font-size: 40px;
+        font-weight: 300;
+      }
+    }
+    .main {
+      margin-block-start: -20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      width: 100%;
+      max-width: 900px;
+      h1 {
+        font-size: clamp(1.75rem, 1.477rem + 1.36vw, 2.5rem);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+    }
+  }
+}
