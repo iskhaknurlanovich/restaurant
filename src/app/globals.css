@@ -9,9 +9,13 @@
   max-width: 1080px;
   margin: 0 auto;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #1b2026;
   color: white;
+  scroll-behavior: smooth;
 }
 .layout {
   display: flex;

@@ -2,7 +2,7 @@ import scss from "./Interior.module.scss";
 
 const Interior = () => {
   return (
-    <section className={scss.interior}>
+    <section className={scss.interior} id="interior">
       <div className="container">
         <div className={scss.content}>
           <div className={scss.top}>
