@@ -15,7 +15,7 @@ const Adress = () => {
   ];
 
   return (
-    <div className={scss.adress}>
+    <div className={scss.adress} id="contact-us">
       <div className="container">
         <div className={scss.content}>
           <div className={scss.leftClass}>

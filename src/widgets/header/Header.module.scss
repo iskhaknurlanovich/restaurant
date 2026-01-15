@@ -1,1 +1,64 @@
-// ckmdkcd
+.header {
+  padding-block: 20px;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    h1 {
+      margin-right: auto;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+      max-width: 400px;
+      p {
+        font-size: clamp(0.813rem, 0.744rem + 0.34vw, 1rem);
+        font-weight: 300;
+        cursor: pointer;
+      }
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: #ef272c;
+      padding: 5px 10px;
+      width: 100%;
+      max-width: 170px;
+      border-radius: 3px;
+      color: #bbbbbb;
+      input {
+        background: none;
+        height: 100%;
+        border: none;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+        &::placeholder {
+          color: #bbbbbb;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    select {
+      background: none;
+      border: none;
+      color: white;
+      font-family: "Cormorant Garamond";
+      &:focus {
+        outline: none;
+      }
+      option {
+        color: white;
+        background-color: black;
+      }
+    }
+  }
+}
