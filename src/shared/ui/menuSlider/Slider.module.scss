@@ -1,41 +1,42 @@
 .menuSlider {
   display: flex;
-  gap: 5rem;
+  gap: 100px;
   width: 100%;
-
+  min-height: 820px;
+  padding-top: 30px;
   .sidebar {
     display: flex;
     flex-direction: column;
-    width: 100%;
     max-width: 270px;
-    border: 0.3px solid rgba(255, 255, 255, 0.208);
-
+    width: 100%;
+    height: 100%;
+    border: 0.3px solid rgba(255, 255, 255, 0.2);
     button {
-      background-color: #1f2731;
-      color: white;
-      cursor: pointer;
-      border: none;
-      font-size: 20px;
+      flex: 1;
       position: relative;
       padding-block: 12px;
-      flex: 1;
+      font-size: 20px;
+      background-color: #1f2731;
+      color: #fff;
+      border: none;
+      cursor: pointer;
       &::after {
         content: "";
         position: absolute;
         bottom: 0;
-        left: 20%; // отступ от начала
-        right: 20%; // отступ от конца
+        left: 20%;
+        right: 20%;
         height: 1px;
-        background-color: #ffffff6c;
+        background-color: rgba(255, 255, 255, 0.42);
       }
       &:last-child::after {
         content: none;
       }
     }
-
     .active {
-      transition: 0.4s ease-out;
       background-color: #ef272c;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.45);
+      transition: 0.4s ease-out;
       &::after {
         content: none;
       }
@@ -44,17 +45,55 @@
 
   .sliderContainer {
     position: relative;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
     flex: 1;
-    .menuList {
-      font-size: 30px;
-      position: absolute;
-      width: 100%;
-      transition: transform 0.4s ease, opacity 0.4s ease;
+    overflow: hidden;
+    &::-webkit-scrollbar {
+      display: none;
     }
 
+    .menuList {
+      position: absolute;
+      width: 100%;
+      font-size: 20px;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .menuCard {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: "Cormorant Garamond";
+        .menuHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 40px;
+          font-size: 25px;
+          .dots {
+            border: 1.2px dashed rgba(255, 255, 255, 0.571);
+            width: 100%;
+            align-self: flex-end;
+            margin-bottom: 10px;
+          }
+          .price {
+            color: #ef272c;
+          }
+        }
+      }
+      .description {
+        font-size: 17px;
+        font-weight: 200;
+        width: 100%;
+        max-width: 440px;
+      }
+      a {
+        font-size: 18px;
+        border-bottom: 1px solid white;
+        padding-bottom: 4px;
+        margin-left: auto;
+      }
+    }
     .slideOut {
       transform: translateY(-100%);
       opacity: 0;
@@ -71,15 +110,15 @@
       opacity: 1;
     }
   }
+}
 
-  @keyframes slideUp {
-    from {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

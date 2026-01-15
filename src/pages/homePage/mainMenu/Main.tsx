@@ -1,6 +1,7 @@
 import { FC } from "react";
 import scss from "./Main.module.scss";
 import Slider from "@/src/shared/ui/menuSlider/Slider";
+import { FaArrowRight } from "react-icons/fa";
 
 const Main: FC = () => {
   return (
@@ -15,6 +16,13 @@ const Main: FC = () => {
           <div className={scss.main}>
             <h1>Exceptional Quality. Delightfully Delicious</h1>
             <Slider />
+            <div className={scss.fullMenuBtn}>
+              <span className={`${scss.line} ${scss.topLine}`}></span>
+              <span className={`${scss.line} ${scss.bottomLine}`}></span>
+              <button>
+                VIEW FULL MENU <FaArrowRight fontSize={10} />
+              </button>
+            </div>
           </div>
         </div>
       </div>
