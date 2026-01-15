@@ -12,7 +12,7 @@ const Banner = () => {
       className={scss.banner}
       style={{
         backgroundImage: `url(${bannerImage.src})`,
-        height: "100vh",
+        height: "90vh",
         width: "100%",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -28,9 +28,13 @@ const Banner = () => {
             <br />
             The Restaurant's sunny decor was inspired by the diners
           </p>
-          <h3>
-            Reserve Your Table <FaArrowRight />
-          </h3>
+          <div className={scss.reserveBtn}>
+            <span className={`${scss.line} ${scss.topLine}`}></span>
+            <span className={`${scss.line} ${scss.bottomLine}`}></span>
+            <button>
+              Reserve Your Table <FaArrowRight fontSize={10} />
+            </button>
+          </div>
         </div>
 
         <div className={scss.text__block}>
@@ -40,11 +44,11 @@ const Banner = () => {
             <span>
               <CiLocationOn />
             </span>
-            <h1>Rua da moeda 1g,1200-275,Portugal</h1>
+            <p>Rua da moeda 1g,1200-275,Portugal</p>
           </div>
 
           <div className={scss.text2}>
-            <h1>Hotline</h1>
+            <p>Hotline</p>
             <p>_______</p>
             <span>
               <FaPhoneFlip />

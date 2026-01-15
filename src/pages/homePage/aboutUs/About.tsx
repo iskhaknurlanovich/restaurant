@@ -1,24 +1,27 @@
 // "use client";
 import React from "react";
-import scss from "./Flavors.module.scss";
+import scss from "./About.module.scss";
 import Us from "../../../assets/images/Frame 15.png";
 import Us1 from "../../../assets/images/Frame 16.png";
 import Image from "next/image";
 
-const Flavors = () => {
+const About = () => {
   return (
-    <div className={scss.flavors}>
+    <div className={scss.about} id="about-us">
       <div className="container">
-        <div className={scss.flavors__block}>
-          <div className={scss.flavors__block__item}>
-            <h4>About</h4>
+        <div className={scss.about__block}>
+          <div className={scss.about__block__item}>
+            <div className={scss.top}>
+              <img src="/blowLeft.svg" alt="" />
+              <h4 className="subtitle">About</h4>
+            </div>
             <h1>
               A Journey Throught <br />
               Cafesio Flavors
             </h1>
             <Image width={300} height={300} src={Us.src} alt="About Us" />
           </div>
-          <div className={scss.flavors__block__item1}>
+          <div className={scss.about__block__item1}>
             <p>
               Try dishes that will open up new tastes for you and delight your{" "}
               <br /> eyes with their appearance. Here you will find a cozy{" "}
@@ -34,4 +37,4 @@ const Flavors = () => {
   );
 };
 
-export default Flavors;
+export default About;
