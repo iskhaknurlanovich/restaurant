@@ -30,6 +30,7 @@ const Header: FC = () => {
             <input type="text" placeholder="Search" />
           </div>
           <select>
+            console.log("🚀 ~ Header ~ select:", select)
             <option>EN</option>
             <option>RU</option>
           </select>
