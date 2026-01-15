@@ -1,48 +1,69 @@
 .banner {
   width: 100%;
+  padding-block: 100px 120px;
+  max-height: 90vh;
   .text {
-    padding-top: 200px;
     text-align: center;
     color: white;
     h1 {
-      font-size: 48px;
+      font-size: 53px;
       font-weight: 700;
       margin-bottom: 16px;
+      font-family: "Cormorant Garamond";
     }
     p {
       font-size: 20px;
+      font-weight: 300;
       margin-bottom: 32px;
     }
-    h3{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-    button {
-      padding: 12px 24px;
-      font-size: 16px;
-      background-color: #ff6347;
-      color: white;
-      border: none;
-      border-radius: 4px;
+    h3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      &:hover {
-        background-color: #ff4500;
+    }
+    .reserveBtn {
+      position: relative;
+      width: 100%;
+      max-width: 214px;
+      padding: 7px 0;
+      margin: 0 auto;
+      button {
+        background: none;
+        border: 1.5px solid #ef272c;
+        color: #fff;
+        padding-block: 10px;
+        width: 100%;
+        gap: 6px;
+        position: relative;
+      }
+      .line {
+        position: absolute;
+        width: 100%;
+        max-width: 80%;
+        height: 0.6px;
+        background-color: #ef272c;
+        z-index: 0;
+        right: 50%;
+        transform: translateX(50%);
+      }
+      .topLine {
+        top: 0px;
+      }
+      .bottomLine {
+        bottom: 0px;
       }
     }
   }
-  .text__block{
-    padding: 430px 0;
+  .text__block {
+    padding: 30px 0;
     margin: 40px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
     gap: 72px;
   }
-  .foottext{
+  .foottext {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,12 +72,14 @@
     font-size: 14px;
     color: #ddd;
   }
-  .text2{
+  .text2 {
     display: flex;
+    font-size: 16px;
+    font-weight: 500;
     gap: 20px;
   }
-  span{
-    font-size: 16px;
-    color:red
+  span {
+    font-size: 20px;
+    color: red;
   }
 }

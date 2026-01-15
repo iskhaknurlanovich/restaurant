@@ -60,6 +60,11 @@
           bottom: 0px;
         }
       }
+      @media (max-width: 500px) {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
     }
   }
 }
