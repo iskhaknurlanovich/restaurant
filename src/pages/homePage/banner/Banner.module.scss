@@ -71,15 +71,90 @@
     margin-top: 60px;
     font-size: 14px;
     color: #ddd;
+
+    span {
+      font-size: 16px;
+      color: red;
+    }
+
+    h6 {
+      width: 100px;
+      background: #f8f6f6;
+      height: 2px;
+    }
   }
   .text2 {
     display: flex;
+    align-items: center;
     font-size: 16px;
     font-weight: 500;
     gap: 20px;
+
+    h6 {
+      width: 100px;
+      height: 2px;
+      background: #f8f6f6;
+    }
+
+    span {
+      font-size: 20px;
+      color: red;
+    }
   }
-  span {
-    font-size: 20px;
-    color: red;
+}
+.modalBlock {
+  margin-left: 75%;
+  margin-top: -20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  background: white;
+  // box-shadow: 0px 3px 28px 16px rgba(25, 53, 75, 0.2);
+
+  animation: slideFromRight 2.5s ease-out forwards;
+  will-change: transform, opacity;
+
+  .mlodalName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 80px;
+
+    span {
+      font-size: 24px;
+      color: black;
+      background: #ef272c;
+    }
+
+    input {
+      width: 150px;
+      padding: 5px;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
+  }
+
+  button {
+    margin: 30px;
+    padding: 8px 55px;
+    background: #ef272c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
