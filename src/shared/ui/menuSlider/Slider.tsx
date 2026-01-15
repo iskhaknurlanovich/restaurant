@@ -2,9 +2,15 @@
 import { useState } from "react";
 import scss from "./Slider.module.scss";
 import { useRouter } from "next/navigation";
-import { FaArrowRight } from "react-icons/fa";
+import Switch from "../switchside/Switch";
 
-type Item = { name: string; price: string; description: string };
+export type Item = {
+  name: string;
+  price: string;
+  description?: string;
+  imageUrl?: string;
+  ingredients?: string[];
+};
 
 const itemsCategory: Record<string, Item[]> = {
   Desserts: [
@@ -222,17 +228,11 @@ const Slider = () => {
 
   return (
     <div className={scss.menuSlider}>
-      <div className={scss.sidebar}>
-        {Object.keys(itemsCategory).map((item) => (
-          <button
-            key={item}
-            className={item === activeCategory ? scss.active : ""}
-            onClick={() => handleCategoryClick(item)}
-          >
-            {item}
-          </button>
-        ))}
-      </div>
+      <Switch
+        handleCategoryClick={handleCategoryClick}
+        itemsCategory={itemsCategory}
+        activeCategory={activeCategory}
+      />
 
       <div className={scss.sliderContainer}>
         {oldCategory && isAnimating && (
