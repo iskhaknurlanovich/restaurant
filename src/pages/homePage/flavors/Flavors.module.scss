@@ -1,0 +1,25 @@
+.flavors{
+    padding: 80px 0;
+    
+    
+    .flavors__block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .flavors__block__item{
+        padding: 20px;
+        h2{
+            font-size: 24px;
+            margin-bottom: 16px;
+            padding: 10px;
+        }
+        p{
+            padding: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+
+
+    }
+}
