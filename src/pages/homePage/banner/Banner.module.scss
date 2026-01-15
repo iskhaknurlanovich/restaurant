@@ -1,0 +1,62 @@
+.banner {
+  width: 100%;
+  .text {
+    padding-top: 200px;
+    text-align: center;
+    color: white;
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 32px;
+    }
+    h3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: #ff4500;
+      }
+    }
+  }
+  .text__block{
+    padding: 430px 0;
+    margin: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 72px;
+  }
+  .foottext{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    font-size: 14px;
+    color: #ddd;
+  }
+  .text2{
+    display: flex;
+    gap: 20px;
+  }
+  span{
+    font-size: 16px;
+    color:red
+  }
+}
