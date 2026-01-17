@@ -35,33 +35,23 @@ const Banner = () => {
             </div>
           </div>
 
-          {open && (
-            <div
-              className={scss.modal}
-              style={{
-                transition: "1s",
-                transform: open ? "translateX(200px)" : "translateX(-200px)",
-              }}
-            >
-              <div className={scss.modalBlock}>
-                <div className={scss.modalName}>
-                  <span>
-                    <IoPersonSharp />
-                  </span>
-                  <h1 style={{ color: "black", fontSize: "20px" }}>NAME</h1>
-                  <input type="text" placeholder="Your Name" />
-                </div>
-                <div className={scss.modalPhone}>
-                  <span>
-                    <FaPhoneFlip />
-                  </span>
-                  <h1 style={{ color: "black", fontSize: "20px" }}>PHONE</h1>
-                  <input type="text" placeholder="Your Phone Number" />
-                </div>
-                <button onClick={() => setOpen(!open)}>Сontact</button>
+          <div className={scss.modal} style={{ right: open ? "" : "-800px" }}>
+            <div className={scss.modalName}>
+              <img src="/Group 2.svg" alt="" />
+              <div className={scss.inputField}>
+                <p>NAME</p>
+                <input type="text" placeholder="Enter your name" />
               </div>
             </div>
-          )}
+            <div className={scss.modalPhone}>
+              <img src="/Group 1.svg" alt="" />
+              <div className={scss.inputField}>
+                <p>PHONE</p>
+                <input type="number" placeholder="Enter your phone" />
+              </div>
+            </div>
+            <button onClick={() => setOpen(!open)}>Сontact</button>
+          </div>
 
           <div className={scss.bottomGroup}>
             <div className={scss.location}>

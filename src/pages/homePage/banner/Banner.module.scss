@@ -126,16 +126,58 @@
       padding: 20px;
       border-radius: 20px;
       background-color: black;
+      animation: slideFromRight 0.3s ease-out forwards;
+      will-change: transform, opacity;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .modalName,
+      .modalPhone {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .inputField {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          p {
+            font-size: 14px;
+            font-weight: 300;
+            color: white;
+          }
+          input {
+            background: none;
+            border: none;
+            color: white;
+            &:focus {
+              outline: none;
+            }
+            &::placeholder {
+              color: #949494;
+            }
+          }
+        }
+      }
+      button {
+        background-color: #ef272c;
+        border: none;
+        border-radius: 3px;
+        padding: 15px;
+        width: 100%;
+        font-size: 14px;
+        color: white;
+      }
     }
   }
 }
 @keyframes slideFromRight {
   from {
-    transform: translateX(-300px);
+    transform: translateX(200px);
     opacity: 0;
   }
   to {
-    transform: translateX(300px);
+    transform: translateX(-200px);
     opacity: 1;
   }
 }

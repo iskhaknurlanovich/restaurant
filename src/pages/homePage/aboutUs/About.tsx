@@ -12,24 +12,23 @@ const About = () => {
         <div className={scss.about__block}>
           <div className={scss.about__block__item}>
             <div className={scss.top}>
-              <img src="/blowLeft.svg" alt="" />
+              <img src="/blowLeft.svg" alt="img" />
               <h4 className="subtitle">About</h4>
             </div>
             <h1>
               A Journey Throught <br />
               Cafesio Flavors
             </h1>
-            <Image width={300} height={300} src={Us.src} alt="About Us" />
+            <Image width={528} height={303} src={Us.src} alt="About Us" />
           </div>
           <div className={scss.about__block__item1}>
             <p>
               Try dishes that will open up new tastes for you and delight your{" "}
-              <br /> eyes with their appearance. Here you will find a cozy{" "}
-              <br /> atmosphere, excellent service and attention to each guest.{" "}
-              <br /> Book a table now and enjoy a unique experience of taste{" "}
-              <br /> discovery!
+              eyes with their appearance. Here you will find a cozy atmosphere,
+              excellent service and attention to each guest. Book a table now
+              and enjoy a unique experience of taste discovery!
             </p>
-            <Image width={400} height={300} src={Us1.src} alt="About Us" />
+            <Image width={528} height={303} src={Us1.src} alt="About Us" />
           </div>
         </div>
       </div>

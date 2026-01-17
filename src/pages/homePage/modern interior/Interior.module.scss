@@ -9,7 +9,11 @@
     gap: 30px;
     position: relative;
     min-height: 700px;
-
+    .top {
+      display: flex;
+      gap: 30px;
+      margin: 0 auto;
+    }
     .carousel {
       display: grid;
       grid-template-columns: repeat(70, 15px);
