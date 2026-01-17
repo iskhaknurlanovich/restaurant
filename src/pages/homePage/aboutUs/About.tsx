@@ -12,14 +12,14 @@ const About = () => {
         <div className={scss.about__block}>
           <div className={scss.about__block__item}>
             <div className={scss.top}>
-              <img src="/blowLeft.svg" alt="" />
+              <img src="/blowLeft.svg" alt="img" />
               <h4 className="subtitle">About</h4>
             </div>
             <h1>
               A Journey Throught <br />
               Cafesio Flavors
             </h1>
-            <Image width={300} height={300} src={Us.src} alt="About Us" />
+            <Image width={528} height={303} src={Us.src} alt="About Us" />
           </div>
           <div className={scss.about__block__item1}>
             <p>
@@ -29,7 +29,7 @@ const About = () => {
               <br /> Book a table now and enjoy a unique experience of taste{" "}
               <br /> discovery!
             </p>
-            <Image width={400} height={300} src={Us1.src} alt="About Us" />
+            <Image width={528} height={303} src={Us1.src} alt="About Us" />
           </div>
         </div>
       </div>
