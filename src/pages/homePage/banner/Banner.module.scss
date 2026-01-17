@@ -1,164 +1,141 @@
 .banner {
-  width: 100%;
-  padding-block: 100px 120px;
-  max-height: 90vh;
-  .text {
-    text-align: center;
-    color: white;
-    h1 {
-      font-size: 53px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      font-family: "Cormorant Garamond";
-    }
-    p {
-      font-size: 20px;
-      font-weight: 300;
-      margin-bottom: 32px;
-    }
-    h3 {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-    .reserveBtn {
-      position: relative;
+  position: relative;
+  margin-block-end: 50px;
+  .backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    img {
       width: 100%;
-      max-width: 214px;
-      padding: 7px 0;
-      margin: 0 auto;
-      button {
-        background: none;
-        border: 1.5px solid #ef272c;
-        color: #fff;
-        padding-block: 10px;
-        width: 100%;
-        gap: 6px;
-        position: relative;
-      }
-      .line {
-        position: absolute;
-        width: 100%;
-        max-width: 80%;
-        height: 0.6px;
-        background-color: #ef272c;
-        z-index: 0;
-        right: 50%;
-        transform: translateX(50%);
-      }
-      .topLine {
-        top: 0px;
-      }
-      .bottomLine {
-        bottom: 0px;
-      }
+      min-width: 100vw;
+      height: 100%;
+      max-height: 80vh;
+      object-fit: cover;
+      object-position: bottom;
     }
   }
-  .text__block {
-    padding: 30px 0;
-    margin: 40px;
+  .content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 72px;
-  }
-  .foottext {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin-top: 60px;
-    font-size: 12px;
-    color: #ddd;
-    h1 {
-      font-size: 16px;
-      font-weight: 400;
-    }
-    span {
-      font-size: 23px;
-      color: red;
-    }
-
-    h6 {
-      width: 100px;
-      background: #f8f6f68d;
-      height: 1.3px;
-    }
-  }
-  .text2 {
-    display: flex;
     align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-    gap: 20px;
-
-    h6 {
-      width: 100px;
-      height: 1.3px;
-      background: #f8f6f68d;
+    min-height: 70vh;
+    position: relative;
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      .top {
+        display: flex;
+        gap: 30px;
+        margin-block-end: -10px;
+      }
+      h1 {
+        font-size: clamp(2.313rem, 1.949rem + 1.82vw, 3.313rem);
+        font-family: "Cormorant Garamond";
+        font-weight: 700;
+      }
+      p {
+        font-weight: 300;
+        line-height: 1.2;
+      }
+      .reserveBtn {
+        position: relative;
+        width: 100%;
+        max-width: 214px;
+        padding: 7px 0;
+        margin-top: 20px;
+        // animation: slideFromRight 1s ease-in-out f;
+        button {
+          background: none;
+          border: 1.5px solid #ef272c;
+          color: #fff;
+          padding-block: 10px;
+          width: 100%;
+          gap: 6px;
+          position: relative;
+        }
+        .line {
+          position: absolute;
+          width: 100%;
+          max-width: 80%;
+          height: 0.6px;
+          background-color: #ef272c;
+          z-index: 0;
+          right: 50%;
+          transform: translateX(50%);
+        }
+        .topLine {
+          top: 0px;
+        }
+        .bottomLine {
+          bottom: 0px;
+        }
+      }
     }
-
-    span {
-      font-size: 20px;
-      color: red;
+    .bottomGroup {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .location,
+      .hotline {
+        display: flex;
+        gap: 30px;
+        h5 {
+          font-size: 18px;
+          font-weight: 400;
+          align-self: center;
+        }
+        .line {
+          height: 1px;
+          width: 100%;
+          max-width: 80px;
+          background-color: white;
+          align-self: center;
+        }
+        .icon {
+          color: red;
+          font-size: 30px;
+          width: 70px;
+        }
+        p {
+          align-self: center;
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+      .location {
+        width: 100%;
+      }
     }
-  }
-}
-.modalBlock {
-  // margin-left: 75%;
-  // margin-top: -20%;
-  position: absolute;
-  right: 100px;
-  top: 35%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 0px 3px 28px 16px rgba(25, 53, 75, 0.2);
-
-  animation: slideFromRight 0.9s;
-  will-change: transform, opacity;
-
-  .mlodalName {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 80px;
-
-    span {
-      font-size: 24px;
-      color: black;
-      background: #ef272c;
+    .modal {
+      transition: 1s;
+      position: absolute;
+      right: -200px;
+      top: 35%;
+      transform: translateX(-35%);
+      padding: 20px;
+      border-radius: 20px;
+      background-color: black;
     }
-
-    input {
-      width: 150px;
-      padding: 5px;
-      border: 1px solid gray;
-      border-radius: 4px;
-    }
-  }
-
-  button {
-    margin: 30px;
-    padding: 8px 55px;
-    background: #ef272c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
   }
 }
 @keyframes slideFromRight {
   from {
-    transform: translateX(100vw);
+    transform: translateX(-300px);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translateX(300px);
     opacity: 1;
   }
 }
