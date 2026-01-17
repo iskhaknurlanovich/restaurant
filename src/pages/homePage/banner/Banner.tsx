@@ -35,7 +35,12 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className={scss.modal} style={{ right: open ? "" : "-800px" }}>
+          <div
+            className={scss.modal}
+            style={{
+              right: open ? "-100px" : "-5000px",
+            }}
+          >
             <div className={scss.modalName}>
               <img src="/Group 2.svg" alt="" />
               <div className={scss.inputField}>
