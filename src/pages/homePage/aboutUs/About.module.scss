@@ -14,26 +14,28 @@
       line-height: 1.4;
       padding: 10px;
     }
-    p { 
+    p {
       padding: 20px;
       font-size: 16px;
       color: #666;
     }
-    .top{
+    .top {
       display: flex;
       align-items: center;
       gap: 22px;
       margin-bottom: 16px;
     }
   }
-  .about__block__item1{
+  .about__block__item1 {
     padding: 20px;
     p {
       padding: 12px 0;
       font-size: 19px;
       line-height: 1.6;
+      width: 100%;
+      max-width: 495px;
     }
-    img{
+    img {
       margin: 20px 0;
     }
   }

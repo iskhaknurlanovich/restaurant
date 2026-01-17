@@ -10,11 +10,13 @@
 }
 html {
   scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 body {
   background-color: #1b2026;
   color: white;
-  scroll-behavior: smooth;
 }
 .layout {
   display: flex;
