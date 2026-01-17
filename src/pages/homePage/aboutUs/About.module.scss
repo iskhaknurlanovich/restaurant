@@ -1,22 +1,40 @@
-.flavors {
+.about {
   padding: 80px 0;
 
-  .flavors__block {
+  .about__block {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .flavors__block__item {
+  .about__block__item {
     padding: 20px;
-    h2 {
-      font-size: 24px;
+    h1 {
+      font-size: 27px;
       margin-bottom: 16px;
+      line-height: 1.4;
       padding: 10px;
     }
-    p {
+    p { 
       padding: 20px;
       font-size: 16px;
       color: #666;
+    }
+    .top{
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-bottom: 16px;
+    }
+  }
+  .about__block__item1{
+    padding: 20px;
+    p {
+      padding: 12px 0;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+    img{
+      margin: 20px 0;
     }
   }
 }
