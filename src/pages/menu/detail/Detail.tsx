@@ -3,6 +3,7 @@ import { FC } from "react";
 import scss from "./Detail.module.scss";
 import { useParams, useRouter } from "next/navigation";
 import { Item } from "@/src/shared/ui/menuSlider/Slider";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Detail: FC = () => {
   const { id }: any = useParams();
@@ -30,7 +31,7 @@ const Detail: FC = () => {
           "Шоколадная крошка",
         ],
         imageUrl:
-          "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Aре-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
+          "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Are-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
       },
       {
         id: "Desserts-3",
@@ -38,7 +39,7 @@ const Detail: FC = () => {
         price: "$10",
         ingredients: ["Мука", "Яблоки", "Сахар", "Корица", "Масло", "Яйцо"],
         imageUrl:
-          "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Aре-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
+          "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Are-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
       },
       {
         id: "Desserts-4",
@@ -53,7 +54,7 @@ const Detail: FC = () => {
           "Клубника",
         ],
         imageUrl:
-          "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Aре-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
+          "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Are-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
       },
       {
         id: "Desserts-5",
@@ -61,7 +62,7 @@ const Detail: FC = () => {
         price: "$9",
         ingredients: ["Шоколад", "Мука", "Яйца", "Сахар", "Орехи", "Масло"],
         imageUrl:
-          "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Aре-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
+          "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Are-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
       },
     ],
     HotDrinks: [
@@ -341,13 +342,16 @@ const Detail: FC = () => {
   }
 
   const currentCategory = Object.keys(itemsCategory).find((key) =>
-    itemsCategory[key].some((item) => item.id === id)
+    itemsCategory[key].some((item) => item.id === id),
   );
 
   return (
     <section className={scss.detail}>
       <div className="container">
         <div className={scss.content}>
+          <button onClick={() => router.push("/menu")} className={scss.backBtn}>
+            <FaArrowLeft />
+          </button>
           {currentItem ? (
             <div className={scss.mainProduct}>
               <div className={scss.title}>
@@ -389,23 +393,29 @@ const Detail: FC = () => {
             </div>
           )}
           <div className={scss.similarProducts}>
-            {currentCategory &&
-              itemsCategory[currentCategory]?.map((item, idx) => (
-                <div key={idx} onClick={() => router.push(`/menu/${item.id}`)}>
-                  <div className={scss.menuCard}>
-                    <img src={item.imageUrl} alt="" />
-                    <div className={scss.menuTitle}>
-                      <div className={scss.info}>
-                        <span className={scss.header}>{item.name}</span>
-                        <p className={scss.description}>
-                          {item.ingredients?.join(", ")}
-                        </p>
+            <h1>Similar gueries</h1>
+            <div className={scss.menuList}>
+              {currentCategory &&
+                itemsCategory[currentCategory]?.map((item, idx) => (
+                  <div
+                    key={idx}
+                    onClick={() => router.push(`/menu/${item.id}`)}
+                  >
+                    <div className={scss.menuCard}>
+                      <img src={item.imageUrl} alt="" />
+                      <div className={scss.menuTitle}>
+                        <div className={scss.info}>
+                          <span className={scss.header}>{item.name}</span>
+                          <p className={scss.description}>
+                            {item.ingredients?.join(", ")}
+                          </p>
+                        </div>
+                        <span className={scss.price}>{item.price}</span>
                       </div>
-                      <span className={scss.price}>{item.price}</span>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+            </div>
           </div>
         </div>
       </div>
