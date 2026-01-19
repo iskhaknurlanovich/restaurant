@@ -3,40 +3,57 @@
 
   .about__block {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-  }
-  .about__block__item {
-    padding: 20px;
-    h1 {
-      font-size: 27px;
-      margin-bottom: 16px;
-      line-height: 1.4;
-      padding: 10px;
-    }
-    p {
-      padding: 20px;
-      font-size: 16px;
-      color: #666;
-    }
-    .top {
+    gap: 40px;
+    .about__block__item {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
-      gap: 22px;
-      margin-bottom: 16px;
+      gap: 30px;
+      width: 100%;
+      .title {
+        .top {
+          display: flex;
+          align-items: center;
+          gap: 22px;
+        }
+        h1 {
+          font-size: clamp(1.813rem, 1.631rem + 0.91vw, 2.313rem);
+          line-height: 1.4;
+          padding: 10px;
+          font-family: "Cormorant Garamond";
+        }
+      }
+      p {
+        font-size: clamp(1.063rem, 1.017rem + 0.23vw, 1.188rem);
+        font-weight: 300;
+        line-height: 1.6;
+        width: 100%;
+        max-width: 480px;
+      }
+    }
+    .about__block__item1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      width: 100%;
+      img {
+        min-height: 270px;
+        width: 100%;
+        max-width: 480px;
+        object-fit: cover;
+      }
     }
   }
-  .about__block__item1 {
-    padding: 20px;
-    p {
-      padding: 12px 0;
-      font-size: 19px;
-      line-height: 1.6;
-      width: 100%;
-      max-width: 495px;
-    }
-    img {
-      margin: 20px 0;
+}
+@media (max-width: 375px) {
+  .about .about__block {
+    .about__block__item {
+      align-items: flex-start;
+      gap: 10px;
     }
   }
 }

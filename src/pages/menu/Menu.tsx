@@ -284,8 +284,7 @@ const Menu: FC = () => {
   return (
     <div className={scss.menu}>
       <button onClick={() => router.back()} className={scss.backBtn}>
-        <FaArrowLeft fontSize={12} />
-        back
+        <FaArrowLeft />
       </button>
       <Switch
         handleCategoryClick={handleCategoryClick}

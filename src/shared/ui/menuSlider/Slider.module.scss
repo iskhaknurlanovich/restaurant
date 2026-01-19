@@ -7,12 +7,11 @@
   .sliderContainer {
     position: relative;
     flex: 1;
-    overflow: hidden;
     &::-webkit-scrollbar {
       display: none;
     }
-
     .menuList {
+      list-style: none;
       position: absolute;
       width: 100%;
       font-size: 20px;
@@ -80,5 +79,14 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@media (max-width: 700px) {
+  .menuSlider {
+    min-height: 0;
+    justify-content: center;
+    .sliderContainer {
+      display: none;
+    }
   }
 }

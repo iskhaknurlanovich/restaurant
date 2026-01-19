@@ -62,6 +62,13 @@ const Adress = () => {
               </a>
             </div>
           </div>
+          <a
+            className={scss.noneMap}
+            href="https://go.2gis.com/5Y7vZ"
+            target="blank"
+          >
+            <img src="/map2.svg" alt="" />
+          </a>
         </div>
       </div>
     </div>
