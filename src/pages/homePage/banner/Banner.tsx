@@ -37,7 +37,7 @@ const Banner = () => {
           <div
             className={scss.modal}
             style={{
-              right: open ? "-100px" : "-5000px",
+              right: open ? "-100px" : "-1000px",
             }}
           >
             <div className={scss.modalName}>
