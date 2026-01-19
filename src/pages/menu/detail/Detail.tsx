@@ -350,7 +350,7 @@ const Detail: FC = () => {
       <div className="container">
         <div className={scss.content}>
           <button onClick={() => router.push("/menu")} className={scss.backBtn}>
-            <FaArrowLeft />
+            <FaArrowLeft fontSize={12} /> Menu
           </button>
           {currentItem ? (
             <div className={scss.mainProduct}>
