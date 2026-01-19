@@ -9,6 +9,7 @@ import { FaArrowLeft } from "react-icons/fa";
 const itemsCategory: Record<string, Item[]> = {
   Desserts: [
     {
+      id: "Desserts-1",
       name: "Cake",
       price: "$12",
       ingredients: ["Мука", "Яйца", "Сахар", "Молоко", "Ваниль", "Ягоды"],
@@ -16,6 +17,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Are-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
     },
     {
+      id: "Desserts-2",
       name: "Ice Cream",
       price: "$8",
       ingredients: [
@@ -30,6 +32,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Are-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
     },
     {
+      id: "Desserts-3",
       name: "Pie",
       price: "$10",
       ingredients: ["Мука", "Яблоки", "Сахар", "Корица", "Масло", "Яйцо"],
@@ -37,6 +40,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Are-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
     },
     {
+      id: "Desserts-4",
       name: "Cheesecake",
       price: "$11",
       ingredients: [
@@ -51,6 +55,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://www.tasteofhome.com/wp-content/uploads/2025/07/30-Summer-Desserts-That-Are-No-Bake-and-Oh-So-Easy_TOHcom23_27515_P2_MD_03_22_6b.jpg",
     },
     {
+      id: "Desserts-5",
       name: "Brownie",
       price: "$9",
       ingredients: ["Шоколад", "Мука", "Яйца", "Сахар", "Орехи", "Масло"],
@@ -60,6 +65,7 @@ const itemsCategory: Record<string, Item[]> = {
   ],
   HotDrinks: [
     {
+      id: "HotDrinks-1",
       name: "Coffee",
       price: "$5",
       ingredients: ["Кофейные зёрна", "Вода", "Сахар", "Молоко", "Корица"],
@@ -67,6 +73,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh1nGlJLvsS3HkT5DAdVXMf3RMtNyVICBTEg&s",
     },
     {
+      id: "HotDrinks-2",
       name: "Tea",
       price: "$4",
       ingredients: ["Чайные листья", "Вода", "Лимон", "Мёд", "Мята"],
@@ -74,6 +81,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh1nGlJLvsS3HkT5DAdVXMf3RMtNyVICBTEg&s",
     },
     {
+      id: "HotDrinks-3",
       name: "Hot Chocolate",
       price: "$6",
       ingredients: ["Какао", "Молоко", "Сахар", "Сливки", "Ваниль"],
@@ -81,6 +89,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh1nGlJLvsS3HkT5DAdVXMf3RMtNyVICBTEg&s",
     },
     {
+      id: "HotDrinks-4",
       name: "Latte",
       price: "$6",
       ingredients: ["Эспрессо", "Молоко", "Ванильный сироп", "Сахар", "Сливки"],
@@ -88,6 +97,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh1nGlJLvsS3HkT5DAdVXMf3RMtNyVICBTEg&s",
     },
     {
+      id: "HotDrinks-5",
       name: "Cappuccino",
       price: "$5",
       ingredients: ["Эспрессо", "Молоко", "Сахар", "Какао-порошок", "Корица"],
@@ -97,6 +107,7 @@ const itemsCategory: Record<string, Item[]> = {
   ],
   ColdDrinks: [
     {
+      id: "ColdDrinks-1",
       name: "Soda",
       price: "$3",
       ingredients: ["Вода", "Сахар", "Газ", "Ароматизатор", "Лимонная кислота"],
@@ -104,6 +115,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUn7-_CXjQ-3pil-SUBMpI_OeVW2FfnLIZrw&s",
     },
     {
+      id: "ColdDrinks-2",
       name: "Juice",
       price: "$4",
       ingredients: ["Апельсин", "Яблоко", "Гранат", "Вода", "Сахар"],
@@ -111,6 +123,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUn7-_CXjQ-3pil-SUBMpI_OeVW2FfnLIZrw&s",
     },
     {
+      id: "ColdDrinks-3",
       name: "Milkshake",
       price: "$5",
       ingredients: ["Молоко", "Мороженое", "Сахар", "Ваниль", "Сливки"],
@@ -118,6 +131,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUn7-_CXjQ-3pil-SUBMpI_OeVW2FfnLIZrw&s",
     },
     {
+      id: "ColdDrinks-4",
       name: "Iced Tea",
       price: "$4",
       ingredients: ["Чай", "Вода", "Лимон", "Мята", "Сахар", "Лёд"],
@@ -125,6 +139,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUn7-_CXjQ-3pil-SUBMpI_OeVW2FfnLIZrw&s",
     },
     {
+      id: "ColdDrinks-5",
       name: "Lemonade",
       price: "$4",
       ingredients: ["Лимон", "Вода", "Сахар", "Мята", "Лёд"],
@@ -134,6 +149,7 @@ const itemsCategory: Record<string, Item[]> = {
   ],
   NationalFoods: [
     {
+      id: "NationalFoods-1",
       name: "Plov",
       price: "$15",
       ingredients: ["Рис", "Мясо", "Морковь", "Лук", "Масло", "Специи"],
@@ -141,6 +157,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKwneP6Rg-m8nMKIsLkZGOjWHDREWUUgn6mw&s",
     },
     {
+      id: "NationalFoods-2",
       name: "Beshbarmak",
       price: "$18",
       ingredients: ["Мясо", "Лапша", "Лук", "Бульон", "Соль", "Перец"],
@@ -148,6 +165,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKwneP6Rg-m8nMKIsLkZGOjWHDREWUUgn6mw&s",
     },
     {
+      id: "NationalFoods-3",
       name: "Lagman",
       price: "$14",
       ingredients: ["Лапша", "Мясо", "Перец", "Помидор", "Лук", "Специи"],
@@ -155,6 +173,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKwneP6Rg-m8nMKIsLkZGOjWHDREWUUgn6mw&s",
     },
     {
+      id: "NationalFoods-4",
       name: "Manty",
       price: "$13",
       ingredients: ["Тесто", "Говядина", "Лук", "Специи", "Масло", "Зелень"],
@@ -162,6 +181,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKwneP6Rg-m8nMKIsLkZGOjWHDREWUUgn6mw&s",
     },
     {
+      id: "NationalFoods-5",
       name: "Shorpo",
       price: "$12",
       ingredients: ["Мясо", "Картофель", "Морковь", "Лук", "Зелень", "Специи"],
@@ -171,6 +191,7 @@ const itemsCategory: Record<string, Item[]> = {
   ],
   EasternCuisine: [
     {
+      id: "EasternCuisine-1",
       name: "Sushi",
       price: "$20",
       ingredients: ["Рис", "Рыба", "Нори", "Огурец", "Авокадо", "Соевый соус"],
@@ -178,6 +199,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt6542458a3d1e8c6f/664cbc3d213dc5f7fd48a20e/origin-of-sushi-hero.jpeg?q=70&width=3840&auto=webp",
     },
     {
+      id: "EasternCuisine-2",
       name: "Ramen",
       price: "$14",
       ingredients: ["Лапша", "Бульон", "Мясо", "Яйцо", "Лук", "Специи"],
@@ -185,6 +207,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt6542458a3d1e8c6f/664cbc3d213dc5f7fd48a20e/origin-of-sushi-hero.jpeg?q=70&width=3840&auto=webp",
     },
     {
+      id: "EasternCuisine-3",
       name: "Tempura",
       price: "$13",
       ingredients: ["Креветки", "Овощи", "Мука", "Яйцо", "Масло", "Соус"],
@@ -192,6 +215,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt6542458a3d1e8c6f/664cbc3d213dc5f7fd48a20e/origin-of-sushi-hero.jpeg?q=70&width=3840&auto=webp",
     },
     {
+      id: "EasternCuisine-4",
       name: "Gyoza",
       price: "$10",
       ingredients: [
@@ -206,6 +230,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt6542458a3d1e8c6f/664cbc3d213dc5f7fd48a20e/origin-of-sushi-hero.jpeg?q=70&width=3840&auto=webp",
     },
     {
+      id: "EasternCuisine-5",
       name: "Teriyaki Chicken",
       price: "$16",
       ingredients: [
@@ -222,6 +247,7 @@ const itemsCategory: Record<string, Item[]> = {
   ],
   FastFoods: [
     {
+      id: "FastFoods-1",
       name: "Burger",
       price: "$9",
       ingredients: [
@@ -236,6 +262,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0cFleHkr83XTp-0AALLRqiAOs7nZxme-OVQ&s",
     },
     {
+      id: "FastFoods-2",
       name: "Fries",
       price: "$4",
       ingredients: ["Картофель", "Масло", "Соль", "Перец", "Соус"],
@@ -243,6 +270,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0cFleHkr83XTp-0AALLRqiAOs7nZxme-OVQ&s",
     },
     {
+      id: "FastFoods-3",
       name: "Hot Dog",
       price: "$6",
       ingredients: ["Булка", "Сосиска", "Горчица", "Кетчуп", "Лук", "Огурец"],
@@ -250,6 +278,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0cFleHkr83XTp-0AALLRqiAOs7nZxme-OVQ&s",
     },
     {
+      id: "FastFoods-4",
       name: "Chicken Nuggets",
       price: "$7",
       ingredients: ["Курица", "Мука", "Яйцо", "Сухари", "Масло", "Соус"],
@@ -257,6 +286,7 @@ const itemsCategory: Record<string, Item[]> = {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0cFleHkr83XTp-0AALLRqiAOs7nZxme-OVQ&s",
     },
     {
+      id: "FastFoods-5",
       name: "Onion Rings",
       price: "$5",
       ingredients: ["Лук", "Мука", "Яйцо", "Сухари", "Масло", "Соус"],
@@ -265,7 +295,6 @@ const itemsCategory: Record<string, Item[]> = {
     },
   ],
 };
-
 const Menu: FC = () => {
   const [activeCategory, setActiveCategory] = useState("Desserts");
   const [isAnimating, setIsAnimating] = useState(false);
@@ -293,13 +322,13 @@ const Menu: FC = () => {
       />
 
       <div className={scss.sliderContainer}>
-        <ul
+        <div
           className={`${scss.menuList} ${
             isAnimating ? scss.slideIn : scss.visible
           }`}
         >
           {itemsCategory[activeCategory]?.map((item, idx) => (
-            <li key={idx}>
+            <div key={idx} onClick={() => router.push(`/menu/${item.id}`)}>
               <div className={scss.menuCard}>
                 <img src={item.imageUrl} alt="" />
                 <div className={scss.menuTitle}>
@@ -312,9 +341,9 @@ const Menu: FC = () => {
                   <span className={scss.price}>{item.price}</span>
                 </div>
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
