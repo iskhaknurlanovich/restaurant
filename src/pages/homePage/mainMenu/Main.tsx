@@ -1,9 +1,30 @@
-import { FC } from "react";
+"use client";
+import { FC, useState, useEffect } from "react";
 import scss from "./Main.module.scss";
 import Slider from "@/src/shared/ui/menuSlider/Slider";
 import { FaArrowRight } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const Main: FC = () => {
+  const router = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 400);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const handleSliderClick = () => {
+    if (isMobile) {
+      router.push("/menu");
+    }
+  };
+
   return (
     <section className={scss.main}>
       <div className="container">
@@ -13,13 +34,13 @@ const Main: FC = () => {
             <h1 className="subtitle">Main Menu</h1>
             <img src="/blowRight.svg" alt="" />
           </div>
-          <div className={scss.main}>
+          <div className={scss.block}>
             <h1>Exceptional Quality. Delightfully Delicious</h1>
-            <Slider />
+            <Slider onClick={handleSliderClick} />
             <div className={scss.fullMenuBtn}>
               <span className={`${scss.line} ${scss.topLine}`}></span>
               <span className={`${scss.line} ${scss.bottomLine}`}></span>
-              <button>
+              <button onClick={() => router.push("/menu")}>
                 VIEW FULL MENU <FaArrowRight fontSize={10} />
               </button>
             </div>

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { FC, useState } from "react";
 import scss from "./Slider.module.scss";
 import { useRouter } from "next/navigation";
 import Switch from "../switchside/Switch";
@@ -207,7 +207,7 @@ const itemsCategory: Record<string, Item[]> = {
   ],
 };
 
-const Slider = () => {
+const Slider: FC<{ onClick?: any }> = ({ onClick }) => {
   const [activeCategory, setActiveCategory] = useState("Desserts");
   const [oldCategory, setOldCategory] = useState("");
   const [isAnimating, setIsAnimating] = useState(false);
@@ -227,7 +227,7 @@ const Slider = () => {
   };
 
   return (
-    <div className={scss.menuSlider}>
+    <div className={scss.menuSlider} onClick={onClick}>
       <Switch
         handleCategoryClick={handleCategoryClick}
         itemsCategory={itemsCategory}

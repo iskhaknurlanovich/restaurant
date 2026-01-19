@@ -4,7 +4,6 @@ import scss from "./Banner.module.scss";
 import { FaArrowRight } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { FaPhoneFlip } from "react-icons/fa6";
-import { IoPersonSharp } from "react-icons/io5";
 
 const Banner = () => {
   const [open, setOpen] = useState(false);
@@ -67,7 +66,7 @@ const Banner = () => {
             </div>
 
             <div className={scss.hotline}>
-              <p>Hotline</p>
+              <h5>Hotline</h5>
               <div className={scss.line}></div>
               <FaPhoneFlip className={scss.icon} />
               <p>+771219900</p>
