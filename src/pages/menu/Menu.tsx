@@ -1,7 +1,6 @@
 "use client";
 import { FC, useState } from "react";
 import scss from "./Menu.module.scss";
-import Switch from "@/src/shared/ui/switchside/Switch";
 import { Item } from "@/src/shared/ui/menuSlider/Slider";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
@@ -315,11 +314,17 @@ const Menu: FC = () => {
       <button onClick={() => router.back()} className={scss.backBtn}>
         <FaArrowLeft />
       </button>
-      <Switch
-        handleCategoryClick={handleCategoryClick}
-        itemsCategory={itemsCategory}
-        activeCategory={activeCategory}
-      />
+      <div className={scss.sidebar}>
+        {Object.keys(itemsCategory).map((item) => (
+          <button
+            key={item}
+            className={item === activeCategory ? scss.active : ""}
+            onClick={() => handleCategoryClick(item)}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
 
       <div className={scss.sliderContainer}>
         <div
@@ -328,18 +333,20 @@ const Menu: FC = () => {
           }`}
         >
           {itemsCategory[activeCategory]?.map((item, idx) => (
-            <div key={idx} onClick={() => router.push(`/menu/${item.id}`)}>
-              <div className={scss.menuCard}>
-                <img src={item.imageUrl} alt="" />
-                <div className={scss.menuTitle}>
-                  <div className={scss.info}>
-                    <span className={scss.header}>{item.name}</span>
-                    <p className={scss.description}>
-                      {item.ingredients?.join(", ")}
-                    </p>
-                  </div>
-                  <span className={scss.price}>{item.price}</span>
+            <div
+              className={scss.menuCard}
+              key={idx}
+              onClick={() => router.push(`/menu/${item.id}`)}
+            >
+              <img src={item.imageUrl} alt="" />
+              <div className={scss.menuTitle}>
+                <div className={scss.info}>
+                  <span className={scss.header}>{item.name}</span>
+                  <p className={scss.description}>
+                    {item.ingredients?.join(", ")}
+                  </p>
                 </div>
+                <span className={scss.price}>{item.price}</span>
               </div>
             </div>
           ))}

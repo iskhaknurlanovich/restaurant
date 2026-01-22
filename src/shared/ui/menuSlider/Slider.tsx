@@ -2,7 +2,6 @@
 import { FC, useState } from "react";
 import scss from "./Slider.module.scss";
 import { useRouter } from "next/navigation";
-import Switch from "../switchside/Switch";
 
 export type Item = {
   id: string;
@@ -259,11 +258,17 @@ const Slider: FC<{ onClick?: any }> = ({ onClick }) => {
 
   return (
     <div className={scss.menuSlider} onClick={onClick}>
-      <Switch
-        handleCategoryClick={handleCategoryClick}
-        itemsCategory={itemsCategory}
-        activeCategory={activeCategory}
-      />
+      <div className={scss.sidebar}>
+        {Object.keys(itemsCategory).map((item) => (
+          <button
+            key={item}
+            className={item === activeCategory ? scss.active : ""}
+            onClick={() => handleCategoryClick(item)}
+          >
+            {item}
+          </button>
+        ))}
+      </div>
 
       <div className={scss.sliderContainer}>
         {oldCategory && isAnimating && (

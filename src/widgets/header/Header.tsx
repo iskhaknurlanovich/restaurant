@@ -47,7 +47,7 @@ const Header: FC = () => {
         <aside
           className={scss.sidebar}
           style={{
-            transform: sidebar ? "translateX(0)" : "translateX(400px)",
+            right: sidebar ? "0" : "-400px",
           }}
         >
           <h1

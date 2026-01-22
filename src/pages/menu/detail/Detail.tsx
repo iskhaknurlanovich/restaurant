@@ -4,6 +4,7 @@ import scss from "./Detail.module.scss";
 import { useParams, useRouter } from "next/navigation";
 import { Item } from "@/src/shared/ui/menuSlider/Slider";
 import { FaArrowLeft } from "react-icons/fa";
+import Switch from "@/src/shared/ui/switchside/Switch";
 
 const Detail: FC = () => {
   const { id }: any = useParams();
@@ -345,6 +346,14 @@ const Detail: FC = () => {
     itemsCategory[key].some((item) => item.id === id),
   );
 
+  const switchData = [
+    "Deserts",
+    "Hot Drinks",
+    "Cold Drinks",
+    "National Foods",
+    "Eastern cuisine",
+    "Fast foods",
+  ];
   return (
     <section className={scss.detail}>
       <div className="container">
@@ -352,69 +361,80 @@ const Detail: FC = () => {
           <button onClick={() => router.push("/menu")} className={scss.backBtn}>
             <FaArrowLeft fontSize={12} /> Menu
           </button>
-          {currentItem ? (
-            <div className={scss.mainProduct}>
-              <div className={scss.title}>
-                <img src={currentItem.imageUrl} alt={currentItem.name} />
-                <div className={scss.productInfo}>
-                  <div className={scss.class}>
-                    <h1>{currentItem.name}</h1>
-                    <div className={scss.ingredients}>
-                      <p className={scss.description}>
-                        {currentItem.ingredients?.join(", ")}
-                      </p>
-                    </div>
-                  </div>
-                  <p className={scss.price}>{currentItem.price}</p>
-                </div>
-              </div>
-              <div className={scss.additionaly}>
-                <div className={scss.extras}>
-                  <h3>Extras</h3>
-                  {extras.map((item, idx) => (
-                    <p key={idx}>
-                      {item.name} <span>{item.price}</span>
-                    </p>
-                  ))}
-                </div>
-                <div className={scss.drinks}>
-                  <h3>Drinks</h3>
-                  {drinks.map((item, idx) => (
-                    <p key={idx}>
-                      {item.name} <span>{item.price}</span>
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="container">
-              <p>Товар не найден</p>
-            </div>
-          )}
-          <div className={scss.similarProducts}>
-            <h1>Similar gueries</h1>
-            <div className={scss.menuList}>
-              {currentCategory &&
-                itemsCategory[currentCategory]?.map((item, idx) => (
-                  <div
-                    key={idx}
-                    onClick={() => router.push(`/menu/${item.id}`)}
-                  >
-                    <div className={scss.menuCard}>
-                      <img src={item.imageUrl} alt="" />
-                      <div className={scss.menuTitle}>
-                        <div className={scss.info}>
-                          <span className={scss.header}>{item.name}</span>
-                          <p className={scss.description}>
-                            {item.ingredients?.join(", ")}
-                          </p>
-                        </div>
-                        <span className={scss.price}>{item.price}</span>
+          <div className={scss.sidebar}>
+            {switchData.map((item) => (
+              <button key={item}>{item}</button>
+            ))}
+          </div>
+          <div className={scss.leftPunct}>
+            {currentItem ? (
+              <div className={scss.mainProduct}>
+                <div className={scss.title}>
+                  <img src={currentItem.imageUrl} alt={currentItem.name} />
+                  <div className={scss.productInfo}>
+                    <div className={scss.class}>
+                      <h1>{currentItem.name}</h1>
+                      <div className={scss.ingredients}>
+                        <p className={scss.description}>
+                          {currentItem.ingredients?.join(", ")}
+                        </p>
                       </div>
                     </div>
+                    <p className={scss.price}>{currentItem.price}</p>
                   </div>
-                ))}
+                </div>
+                <div className={scss.additionaly}>
+                  <span className={scss.category}>{currentCategory}</span>
+                  <div className={scss.extras}>
+                    <h3>Extras</h3>
+                    {extras.map((item, idx) => (
+                      <p key={idx}>
+                        {item.name} <span>{item.price}</span>
+                      </p>
+                    ))}
+                  </div>
+                  <div className={scss.drinks}>
+                    <h3>Drinks</h3>
+                    {drinks.map((item, idx) => (
+                      <p key={idx}>
+                        {item.name} <span>{item.price}</span>
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="container">
+                <p>Товар не найден</p>
+              </div>
+            )}
+            <div className={scss.similarProducts}>
+              <h1>Similar gueries</h1>
+              <div className={scss.menuList}>
+                {currentCategory &&
+                  itemsCategory[currentCategory]
+                    .filter((item) => item !== currentItem)
+                    ?.map((item, idx) => (
+                      <div
+                        key={idx}
+                        onClick={() => router.push(`/menu/${item.id}`)}
+                      >
+                        <div className={scss.menuCard}>
+                          <img src={item.imageUrl} alt="" />
+                          <div className={scss.menuTitle}>
+                            <div className={scss.info}>
+                              <span className={scss.header}>{item.name}</span>
+                              <p className={scss.description}>
+                                {item.ingredients?.slice(0, 5).join(", ") +
+                                  "  ..."}
+                              </p>
+                            </div>
+                            <span className={scss.price}>{item.price}</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+              </div>
             </div>
           </div>
         </div>
