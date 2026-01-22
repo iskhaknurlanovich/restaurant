@@ -2,9 +2,8 @@
   padding-block: 100px 40px;
   .content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 70px;
+    justify-content: center;
+    gap: 40px;
     .backBtn {
       padding: 8px 12px;
       border-radius: 40px;
@@ -19,141 +18,244 @@
       display: flex;
       align-items: center;
       gap: 5px;
+      z-index: 10;
     }
-    .mainProduct {
-      display: flex;
-      gap: 20px;
-      height: auto;
-      background-color: #1f2731;
-      width: 100%;
-      max-width: 730px;
-      border: 1px solid rgba(255, 255, 255, 0.207);
-      .title {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        img {
-          width: 100%;
-          max-height: 160px;
-          object-fit: cover;
-          border-radius: 0 0 25px 0;
-        }
-        .productInfo {
-          padding: 0 10px 5px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 20px;
-          .class {
-            display: flex;
-            flex-direction: column;
-            gap: 7px;
-            h1 {
-              font-size: 20px;
-              font-weight: 400;
-            }
-            .ingredients {
-              display: flex;
-              gap: 5px;
-              font-size: 12px;
-              color: #b3b3b3;
-            }
-          }
-          .price {
-            color: #ef272c;
-            letter-spacing: 1.2;
-          }
-        }
-      }
-      .additionaly {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px 15px 20px 5px;
-        width: 100%;
-        max-width: 330px;
-        .extras,
-        .drinks {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          gap: 15px;
-          width: 100%;
-          color: #939393;
-          h3 {
-            color: white;
-            font-weight: 400;
-          }
-          p {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-          }
-        }
-      }
-    }
-    .similarProducts {
+    .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 30px;
-      .menuList {
+      width: 100%;
+      max-width: 270px;
+      height: 100%;
+      border: 0.3px solid rgba(255, 255, 255, 0.2);
+      button {
+        flex: 1;
         position: relative;
+        padding-block: 12px;
         font-size: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        max-width: 730px;
-        gap: 20px 10px;
-        list-style: none;
-        h1 {
-          font-size: 40px;
-          font-family: "Cormorant Garamond";
+        font-weight: 600;
+        background-color: #1f2731;
+        color: #b7b7b7;
+        border: none;
+        font-family: "Cormorant Garamond";
+        cursor: pointer;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 20%;
+          right: 20%;
+          height: 1px;
+          background-color: rgba(255, 255, 255, 0.42);
         }
-        .menuCard {
+        &:last-child::after {
+          content: none;
+        }
+        &:first-child {
+          background-color: #ef272c;
+          box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.45);
+          transition: 0.4s ease-out;
+          color: white;
+          &::after {
+            content: none;
+          }
+        }
+      }
+    }
+    .leftPunct {
+      width: 100%;
+      max-width: 600px;
+      .mainProduct {
+        display: flex;
+        gap: 20px;
+        height: auto;
+        background-color: #1f2731;
+        width: 100%;
+        max-width: 630px;
+        border: 1px solid rgba(255, 255, 255, 0.207);
+        .title {
           display: flex;
           flex-direction: column;
-          font-family: "Cormorant Garamond";
-          width: 350px;
-          height: 100%;
-          color: black;
-          background-color: white;
-          border-radius: 3px;
+          gap: 10px;
           img {
-            border-radius: 3px 3px 0 0;
             width: 100%;
-            height: 170px;
+            max-height: 160px;
             object-fit: cover;
+            border-radius: 0 0 25px 0;
           }
-          .menuTitle {
+          .productInfo {
+            padding: 0 10px 5px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
-            font-size: 25px;
-            padding: 10px;
-            .info {
+            .class {
               display: flex;
               flex-direction: column;
-              gap: 5px;
-              .header {
-                font-size: 16px;
-                font-weight: 600;
-                font-family: Arial, Helvetica, sans-serif;
+              gap: 7px;
+              h1 {
+                font-size: 20px;
+                font-weight: 400;
               }
-              .description {
-                font-size: 13px;
-                font-weight: 200;
-                width: 100%;
-                max-width: 440px;
+              .ingredients {
+                display: flex;
+                gap: 5px;
+                font-size: 12px;
+                color: #b3b3b3;
+                line-height: 1.2;
               }
             }
             .price {
               color: #ef272c;
-              font-weight: 600;
+              letter-spacing: 1.2;
             }
           }
+        }
+        .additionaly {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 20px 15px 20px 5px;
+          width: 100%;
+          max-width: 330px;
+          .extras,
+          .drinks {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            width: 100%;
+            color: #939393;
+            h3 {
+              color: white;
+              font-weight: 400;
+            }
+            p {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+      .similarProducts {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-block: 45px;
+        h1 {
+          font-size: 35px;
+          font-weight: 400;
+          font-family: "Cormorant Garamond";
+        }
+        .menuList {
+          position: relative;
+          font-size: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          // justify-content: space-between;
+          justify-content: center;
+          width: 100%;
+          max-width: 730px;
+          gap: 20px;
+          list-style: none;
+          .menuCard {
+            display: flex;
+            flex-direction: column;
+            font-family: "Cormorant Garamond";
+            width: 290px;
+            height: 100%;
+            color: black;
+            background-color: white;
+            border-radius: 3px;
+            img {
+              border-radius: 3px 3px 0 0;
+              width: 100%;
+              height: 170px;
+              object-fit: cover;
+            }
+            .menuTitle {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 20px;
+              font-size: 25px;
+              padding: 10px;
+              .info {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                .header {
+                  font-size: 16px;
+                  font-weight: 600;
+                  font-family: Arial, Helvetica, sans-serif;
+                }
+                .description {
+                  font-size: 13px;
+                  font-weight: 200;
+                  width: 100%;
+                  max-width: 440px;
+                }
+              }
+              .price {
+                color: #ef272c;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .detail {
+    padding: 50px 0;
+    .content {
+      .sidebar {
+        display: none;
+      }
+      .leftPunct {
+        .mainProduct {
+          flex-direction: column;
+          background: none;
+          border: none;
+          gap: 10px;
+          .title {
+            gap: 30px;
+            img {
+              border-radius: 0;
+              max-height: 230px;
+            }
+          }
+          .additionaly {
+            padding: 10px;
+            max-width: 100%;
+            gap: 0;
+            .category {
+              background-color: #ef272c;
+              width: 100%;
+              max-width: 130px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px 5px;
+              border-radius: 3px;
+              margin-bottom: 20px;
+              font-weight: 400;
+            }
+            .extras {
+              border-block: 1px solid rgba(255, 255, 255, 0.491);
+              padding-block: 30px;
+            }
+            .drinks {
+              padding-block: 30px;
+            }
+          }
+        }
+
+        .similarProducts {
+          display: none;
         }
       }
     }

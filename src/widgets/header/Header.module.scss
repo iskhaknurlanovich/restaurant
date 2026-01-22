@@ -73,7 +73,7 @@
     }
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 675px) {
   .header {
     padding-block: 20px;
     position: relative;
@@ -102,7 +102,7 @@
     }
     aside.sidebar {
       position: fixed;
-      left: 0;
+      right: -400px;
       top: 0;
       background-color: #1b2026;
       width: 100%;
