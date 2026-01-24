@@ -107,6 +107,7 @@ const Header: FC = () => {
                 onClick={() => {
                   setLang("en");
                   i18n.changeLanguage("en");
+                  setSidebar(false);
                 }}
               >
                 EN
@@ -116,6 +117,7 @@ const Header: FC = () => {
                 onClick={() => {
                   setLang("ru");
                   i18n.changeLanguage("ru");
+                  setSidebar(false);
                 }}
               >
                 RU
@@ -125,6 +127,7 @@ const Header: FC = () => {
                 onClick={() => {
                   setLang("kg");
                   i18n.changeLanguage("kg");
+                  setSidebar(false);
                 }}
               >
                 KG

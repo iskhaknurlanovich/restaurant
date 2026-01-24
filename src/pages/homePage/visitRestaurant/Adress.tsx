@@ -8,7 +8,9 @@ import { useTranslation } from "react-i18next";
 
 const Adress = () => {
   const { t } = useTranslation("adress");
-  const data = [
+  const data: {
+    timeWork: string;
+  }[] = [
     {
       timeWork: t("time.info.firstTime"),
     },
@@ -33,7 +35,7 @@ const Adress = () => {
             </div>
             <div className={scss.timeWork}>
               <h3>{t("time.title")}</h3>
-              {data?.map((item: any, idx: number) => (
+              {data?.map((item, idx: number) => (
                 <p key={idx}>{item.timeWork}</p>
               ))}
             </div>

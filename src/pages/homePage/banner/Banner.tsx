@@ -33,29 +33,6 @@ const Banner = () => {
             </div>
           </div>
 
-          <div
-            className={scss.modal}
-            style={{
-              right: open ? "-100px" : "-1000px",
-            }}
-          >
-            <div className={scss.modalName}>
-              <img src="/Group 2.svg" alt="" />
-              <div className={scss.inputField}>
-                <p>{t("modal.name.text")}</p>
-                <input type="text" placeholder={t("modal.name.input")} />
-              </div>
-            </div>
-            <div className={scss.modalPhone}>
-              <img src="/Group 1.svg" alt="" />
-              <div className={scss.inputField}>
-                <p>{t("modal.phone.text")}</p>
-                <input type="number" placeholder={t("modal.phone.input")} />
-              </div>
-            </div>
-            <button onClick={() => setOpen(!open)}>{t("modal.textBtn")}</button>
-          </div>
-
           <div className={scss.bottomGroup}>
             <div className={scss.location}>
               <h5>{t("location.text")}</h5>
@@ -70,6 +47,28 @@ const Banner = () => {
               <FaPhoneFlip className={scss.icon} />
               <p>{t("hotline.info")}</p>
             </div>
+          </div>
+          <div
+            className={scss.modal}
+            style={{
+              right: open ? "0" : "-400px",
+            }}
+          >
+            <div className={scss.modalName}>
+              <img src="/image/Group 2.svg" alt="" />
+              <div className={scss.inputField}>
+                <p>{t("modal.name.text")}</p>
+                <input type="text" placeholder={t("modal.name.input")} />
+              </div>
+            </div>
+            <div className={scss.modalPhone}>
+              <img src="/image/Group 1.svg" alt="" />
+              <div className={scss.inputField}>
+                <p>{t("modal.phone.text")}</p>
+                <input type="number" placeholder={t("modal.phone.input")} />
+              </div>
+            </div>
+            <button onClick={() => setOpen(!open)}>{t("modal.textBtn")}</button>
           </div>
         </div>
       </div>

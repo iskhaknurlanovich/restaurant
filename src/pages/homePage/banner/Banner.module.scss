@@ -130,16 +130,15 @@
       }
     }
     .modal {
-      transition: 1s;
-      position: absolute;
-      right: -200px;
+      position: fixed;
+      right: -400px;
+      z-index: 100;
       top: 35%;
       transform: translateX(-35%);
+      transition: 0.4s;
+      background-color: black;
       padding: 20px;
       border-radius: 20px;
-      background-color: black;
-      animation: slideFromRight 0.01s ease-in;
-      will-change: transform, opacity;
       color: white;
       display: flex;
       flex-direction: column;
