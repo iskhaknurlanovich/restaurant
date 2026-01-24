@@ -1,1 +1,159 @@
-// ckmdkcd
+.header {
+  padding-block: 12px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.473);
+  position: fixed;
+  width: 100%;
+  background-color: #1b2026;
+  z-index: 1000;
+  aside.sidebar {
+    display: none;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+    .burgerMenu {
+      display: none;
+    }
+    h1 {
+      margin-right: auto;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+      max-width: 400px;
+      p {
+        font-size: clamp(0.813rem, 0.744rem + 0.34vw, 1rem);
+        font-weight: 300;
+        cursor: pointer;
+      }
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: #ef272acc;
+      padding: 5px 10px;
+      width: 100%;
+      max-width: 150px;
+      border-radius: 3px;
+      color: #bbbbbb;
+      input {
+        background: none;
+        height: 100%;
+        border: none;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+        &::placeholder {
+          color: #bbbbbb;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    select {
+      background: none;
+      border: none;
+      color: white;
+      font-family: "Cormorant Garamond";
+      &:focus {
+        outline: none;
+      }
+      option {
+        color: white;
+        background-color: black;
+      }
+    }
+  }
+}
+@media (max-width: 675px) {
+  .header {
+    padding-block: 20px;
+    position: relative;
+    .content .burgerMenu {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 25px;
+      span {
+        height: 1.3px;
+        width: 100%;
+        background-color: white;
+        &:first-child,
+        &:nth-child(2) {
+          width: 50%;
+          margin-left: auto;
+        }
+      }
+    }
+    .content {
+      nav,
+      select,
+      .search {
+        display: none;
+      }
+    }
+    aside.sidebar {
+      position: fixed;
+      right: -400px;
+      top: 0;
+      z-index: 100;
+      transition: 0.4s;
+      background-color: #1b2026;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      height: 100vh;
+      width: 100%;
+      max-width: 375px;
+      h1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.473);
+        cursor: pointer;
+        .icon {
+          font-size: 20px;
+        }
+      }
+      nav {
+        padding: 50px 40px;
+        font-weight: 300;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        text-align: start;
+        p {
+          cursor: pointer;
+        }
+        .switchLang {
+          display: flex;
+          gap: 20px;
+          letter-spacing: 1.4;
+          p {
+            color: #b2b2b2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 3px;
+            cursor: pointer;
+          }
+          .active {
+            border-bottom: 2px solid white;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

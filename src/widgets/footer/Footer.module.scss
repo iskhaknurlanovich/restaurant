@@ -1,1 +1,64 @@
-// cdcdcdc
+.footer {
+  padding-block: 50px 30px;
+  background-color: #121212;
+  color: white;
+  box-shadow: inset 0 0 60px 5px black;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .mainFooter {
+      padding-block: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 400px;
+        a {
+          color: white;
+          font-size: 17px;
+          letter-spacing: 1;
+        }
+      }
+      .icons {
+        display: flex;
+        gap: 20px;
+        .icon {
+          font-size: clamp(1.25rem, 0.932rem + 1.59vw, 2.125rem);
+          flex: 1;
+        }
+      }
+    }
+    hr {
+      width: 100%;
+      opacity: 0.7;
+    }
+    .info {
+      font-size: clamp(0.625rem, 0.58rem + 0.23vw, 0.75rem);
+      font-weight: 300;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    padding: 30px;
+    .content {
+      align-items: flex-start;
+      gap: 20px;
+      .mainFooter {
+        padding: 0;
+        nav {
+          display: none;
+        }
+      }
+    }
+  }
+}

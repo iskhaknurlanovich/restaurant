@@ -1,0 +1,14 @@
+{
+  "simtext": "Similar queries",
+  "btnText": "Menu",
+  "extras": "Extras",
+  "drinks": "Drinks",
+  "categories": {
+    "c1": "Desserts",
+    "c2": "Hot Drinks",
+    "c3": "Cold Drinks",
+    "c4": "National Foods",
+    "c5": "Eastern Cuisine",
+    "c6": "Fast Foods"
+  }
+}

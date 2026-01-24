@@ -1,0 +1,17 @@
+{
+  "text": "Visit Restaurant",
+  "title": "Join Us for Happy Hours",
+  "adress": {
+    "title": "Your neighborhood",
+    "info": "225$.Lake Ave.Suite 1150 Pasadena,CA 911101"
+  },
+  "time": {
+    "title": "Opening hours:",
+    "info": {
+      "firstTime": "Mon-Thu: 10:00 am - 01:00 am",
+      "secondTime": "Fri-Sun: 10:00 am - 02:00 am"
+    }
+  },
+  "btnText": "PURCHASE GIFT CARD",
+  "contact": "Contact Info"
+}

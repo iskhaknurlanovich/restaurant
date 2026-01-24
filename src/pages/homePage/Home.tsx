@@ -1,13 +1,20 @@
-import { FC } from "react";
-import scss from "./Home.module.scss";
+import Banner from "./banner/Banner";
+import Main from "./mainMenu/Main";
+import Adress from "./visitRestaurant/Adress";
+import Interior from "./modern interior/Interior";
+import Flavors from "./aboutUs/About";
+import BestSellers from "./bestSellers/BestSellers";
 
-const Home: FC = () => {
+const Home = () => {
   return (
-    <section className={scss.Home}>
-      <div className="container">
-        <div className={scss.content}>Home</div>
-      </div>
-    </section>
+    <div>
+      <Banner />
+      <Flavors />
+      <BestSellers />
+      <Main />
+      <Interior />
+      <Adress />
+    </div>
   );
 };
 

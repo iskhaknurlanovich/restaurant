@@ -1,0 +1,25 @@
+{
+  "delicios": "Delicios",
+  "title": "Italian Cuisine",
+  "description": "Classic steak & delicious with delightfully unexpected twists. The Restaurants sunny decor was inspired by the diners",
+  "btn": "Reserve your table",
+  "location": {
+    "text": "Location",
+    "info": "Rua da moeda 1g,1200-275,Portugal"
+  },
+  "Hotline": {
+    "text": "Hotline",
+    "info": "+771219900"
+  },
+  "modal": {
+    "name": {
+      "text": "NAME",
+      "input": "Enter your name"
+    },
+    "phone": {
+      "text": "PHONE",
+      "input": "Enter your phone"
+    },
+    "textBtn": "Contact"
+  }
+}

@@ -1,0 +1,67 @@
+.main {
+  padding-block: 40px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      h1 {
+        font-family: "Shalimar";
+        font-size: 40px;
+        font-weight: 300;
+      }
+    }
+    .block {
+      margin-block-start: -20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+      padding: 30px 0;
+      h1 {
+        font-size: clamp(1.75rem, 1.477rem + 1.36vw, 2.5rem);
+        font-family: "Cormorant Garamond";
+        width: 100%;
+        max-width: 440px;
+        text-align: center;
+      }
+      .fullMenuBtn {
+        position: relative;
+        width: 100%;
+        max-width: 214px;
+        padding: 7px 0;
+        margin-top: 30px;
+        button {
+          background: none;
+          border: 1.5px solid #ef272c;
+          color: #fff;
+          padding-block: 10px;
+          width: 100%;
+          gap: 6px;
+          position: relative;
+        }
+        .line {
+          position: absolute;
+          width: 100%;
+          max-width: 80%;
+          height: 0.6px;
+          background-color: #ef272c;
+          z-index: 0;
+          right: 50%;
+          transform: translateX(50%);
+        }
+        .topLine {
+          top: 0px;
+        }
+        .bottomLine {
+          bottom: 0px;
+        }
+      }
+    }
+  }
+}

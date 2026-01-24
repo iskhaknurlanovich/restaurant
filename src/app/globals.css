@@ -1,16 +1,24 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
   box-sizing: border-box;
 }
 .container {
-  width: 100%;
-  max-width: 1100px;
+  width: 90%;
+  max-width: 1080px;
   margin: 0 auto;
 }
-
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+body {
+  background-color: #1b2026;
+  color: white;
+}
 .layout {
   display: flex;
   flex-direction: column;
@@ -19,4 +27,33 @@
   footer {
     margin-top: auto;
   }
+}
+a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+button {
+  font-size: clamp(0.625rem, 0.58rem + 0.23vw, 0.75rem);
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  &:active {
+    transform: scale(0.93);
+  }
+}
+.subtitle {
+  font-family: "Shalimar";
+  font-size: 30px;
+  font-weight: 100;
+}
+.logo {
+  letter-spacing: -1;
+  font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+  font-family: "Cormorant Garamond";
 }

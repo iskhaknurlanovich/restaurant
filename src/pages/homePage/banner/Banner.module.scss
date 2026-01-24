@@ -1,0 +1,232 @@
+.banner {
+  position: relative;
+  margin-block-end: 50px;
+
+  .backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    img {
+      width: 100%;
+      min-width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+  .content {
+    padding-block: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    position: relative;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 430px;
+      text-align: center;
+      .top {
+        display: flex;
+        gap: 30px;
+        margin-block-end: -10px;
+        filter: drop-shadow(0 0 5px black);
+      }
+      h1 {
+        font-size: clamp(2.313rem, 1.949rem + 1.82vw, 3.313rem);
+        font-family: "Cormorant Garamond";
+        font-weight: 700;
+        filter: drop-shadow(0 0 5px black);
+      }
+      p {
+        filter: drop-shadow(0 0 5px black);
+        font-weight: 300;
+        line-height: 1.2;
+      }
+      .reserveBtn {
+        position: relative;
+        width: 100%;
+        max-width: 214px;
+        padding: 7px 0;
+        margin-top: 20px;
+        button {
+          background: none;
+          border: 1.5px solid #ef272c;
+          color: #fff;
+          padding-block: 10px;
+          width: 100%;
+          gap: 6px;
+          position: relative;
+        }
+        .line {
+          position: absolute;
+          width: 100%;
+          max-width: 80%;
+          height: 0.6px;
+          background-color: #ef272c;
+          z-index: 0;
+          right: 50%;
+          transform: translateX(50%);
+        }
+        .topLine {
+          top: 0px;
+        }
+        .bottomLine {
+          bottom: 0px;
+        }
+      }
+    }
+    .bottomGroup {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      .location,
+      .hotline {
+        display: flex;
+        gap: 30px;
+        h5 {
+          font-size: 18px;
+          font-weight: 400;
+          align-self: center;
+        }
+        .line {
+          height: 1px;
+          width: 100%;
+          max-width: 80px;
+          background-color: white;
+          align-self: center;
+        }
+        .icon {
+          color: red;
+          font-size: 30px;
+          width: 70px;
+        }
+        p {
+          align-self: center;
+          width: 100%;
+          max-width: 400px;
+        }
+      }
+      .location {
+        width: 100%;
+        max-width: 600px;
+      }
+      .hotline {
+        width: 100%;
+        max-width: 400px;
+        h5 {
+          width: 120%;
+        }
+      }
+    }
+    .modal {
+      position: fixed;
+      right: -400px;
+      z-index: 100;
+      top: 35%;
+      transform: translateX(-35%);
+      transition: 0.4s;
+      background-color: black;
+      padding: 20px;
+      border-radius: 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .modalName,
+      .modalPhone {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .inputField {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          p {
+            font-size: 14px;
+            font-weight: 300;
+            color: white;
+          }
+          input {
+            background: none;
+            border: none;
+            color: white;
+            &:focus {
+              outline: none;
+            }
+            &::placeholder {
+              color: #949494;
+            }
+          }
+        }
+      }
+      button {
+        background-color: #ef272c;
+        border: none;
+        border-radius: 3px;
+        padding: 15px;
+        width: 100%;
+        font-size: 14px;
+        color: white;
+      }
+    }
+  }
+}
+@media (max-width: 675px) {
+  .banner {
+    padding: 0;
+    .backgroundImg {
+      img {
+        height: 110vh;
+        max-height: 110vh;
+      }
+    }
+    .content {
+      min-height: 110vh;
+      .title {
+        max-width: 300px;
+        padding-bottom: 100px;
+      }
+      .bottomGroup {
+        bottom: 20px;
+        .location,
+        .hotline {
+          flex-direction: column;
+          align-items: start;
+          gap: 15px;
+          .icon {
+            display: none;
+          }
+          h5 {
+            align-self: start;
+          }
+          .line {
+            margin-right: auto;
+            background-color: #ffffff6e;
+          }
+          p {
+            color: rgb(197, 197, 197);
+          }
+        }
+        .hotline {
+          width: 30%;
+          h5,
+          p {
+            align-self: end;
+            text-align: end;
+          }
+        }
+      }
+    }
+  }
+}
