@@ -1,5 +1,5 @@
 "use client";
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 import scss from "./Detail.module.scss";
 import { useParams, useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
@@ -21,7 +21,13 @@ interface Drink {
 }
 
 const Detail: FC = () => {
-  const { id } = useParams() as { id: string };
+  const params = useParams();
+  const id = (params?.id as string) || null;
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   const { t } = useTranslation("detail");
   const router = useRouter();
 
@@ -109,6 +115,10 @@ const Detail: FC = () => {
         return item.name;
     }
   };
+
+  if (!isMounted || !id) {
+    return null;
+  }
 
   return (
     <section className={scss.detail}>
