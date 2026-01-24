@@ -18,6 +18,9 @@ const BestSellers = () => {
       setIndex(index + 1);
     }
   };
+  const prev = () => {
+    setIndex(index - 1);
+  };
 
   return (
     <div className={scss.best__sellers}>
@@ -40,17 +43,21 @@ const BestSellers = () => {
               className={scss.track}
               style={{ transform: `translateX(-${index * 50}%)` }}
             >
-              
-              {images.map((src, i) => (
+              {images.map((item, i) => (
                 <div className={scss.slide} key={i}>
-                  <img src={src} alt="img" />
+                  <img src={item} alt="img" />
                 </div>
               ))}
             </div>
-
-            <button className={scss.arrow} onClick={next}>
-              <img src="/Frame 38.svg" alt="next" />
-            </button>
+            {index! > images.length ? (
+              <button className={scss.arrow} onClick={next}>
+                <img src="/Frame 38.svg" alt="next" />
+              </button>
+            ) : (
+              <button onClick={prev}>
+                <img src="/Frame 38.svg" alt="next" />
+              </button>
+            )}
           </div>
         </div>
       </div>

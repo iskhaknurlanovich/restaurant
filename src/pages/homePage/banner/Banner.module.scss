@@ -52,7 +52,6 @@
         max-width: 214px;
         padding: 7px 0;
         margin-top: 20px;
-        // animation: slideFromRight 1s ease-in-out f;
         button {
           background: none;
           border: 1.5px solid #ef272c;
@@ -172,17 +171,6 @@
         color: white;
       }
     }
-  }
-}
-@keyframes slideFromRight {
-  from {
-    transform: translateX(300px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(-200px);
-    opacity: 1;
-    // display: none;
   }
 }
 @media (max-width: 675px) {

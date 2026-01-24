@@ -4,7 +4,6 @@ import scss from "./Detail.module.scss";
 import { useParams, useRouter } from "next/navigation";
 import { Item } from "@/src/shared/ui/menuSlider/Slider";
 import { FaArrowLeft } from "react-icons/fa";
-import Switch from "@/src/shared/ui/switchside/Switch";
 
 const Detail: FC = () => {
   const { id }: any = useParams();
@@ -348,11 +347,11 @@ const Detail: FC = () => {
 
   const switchData = [
     "Deserts",
-    "Hot Drinks",
-    "Cold Drinks",
-    "National Foods",
-    "Eastern cuisine",
-    "Fast foods",
+    "HotDrinks",
+    "ColdDrinks",
+    "NationalFoods",
+    "EasternCuisine",
+    "FastFoods",
   ];
   return (
     <section className={scss.detail}>
@@ -363,7 +362,9 @@ const Detail: FC = () => {
           </button>
           <div className={scss.sidebar}>
             {switchData.map((item) => (
-              <button key={item}>{item}</button>
+              <button onClick={() => router.push("/menu")} key={item}>
+                {item}
+              </button>
             ))}
           </div>
           <div className={scss.leftPunct}>

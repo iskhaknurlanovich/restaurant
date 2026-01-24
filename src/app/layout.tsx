@@ -3,6 +3,7 @@ import { League_Spartan } from "next/font/google";
 import "./globals.css";
 import Header from "../widgets/header/Header";
 import Footer from "../widgets/footer/Footer";
+import ReactQueryClientProvider from "./providers/ReactQueryClientProvider";
 
 const spartan = League_Spartan();
 
@@ -29,11 +30,13 @@ export default function RootLayout({
         />
       </head>
       <body className={`${spartan.className}`}>
-        <div className="layout">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <ReactQueryClientProvider>
+          <div className="layout">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </ReactQueryClientProvider>
       </body>
     </html>
   );

@@ -3,7 +3,7 @@
   .content {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 90px;
     .backBtn {
       padding: 8px 12px;
       border-radius: 40px;
@@ -117,6 +117,18 @@
           padding: 20px 15px 20px 5px;
           width: 100%;
           max-width: 330px;
+          .category {
+            background-color: #ef272c;
+            width: 100%;
+            max-width: 130px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 5px;
+            border-radius: 3px;
+            margin-bottom: 20px;
+            font-weight: 400;
+          }
           .extras,
           .drinks {
             flex: 1;
@@ -233,16 +245,7 @@
             max-width: 100%;
             gap: 0;
             .category {
-              background-color: #ef272c;
-              width: 100%;
-              max-width: 130px;
               display: flex;
-              align-items: center;
-              justify-content: center;
-              padding: 10px 5px;
-              border-radius: 3px;
-              margin-bottom: 20px;
-              font-weight: 400;
             }
             .extras {
               border-block: 1px solid rgba(255, 255, 255, 0.491);

@@ -1,6 +1,7 @@
 .best__sellers {
   padding: 80px 0;
   color: white;
+  position: relative;
 
   &__block {
     display: flex;
@@ -36,10 +37,8 @@
   }
 }
 
-
 .slider {
-  position: relative;
-  width: 550px; 
+  width: 550px;
   overflow: hidden;
 }
 
@@ -49,7 +48,7 @@
 }
 
 .slide {
-  min-width: 50%; 
+  min-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,10 +60,9 @@
   }
 }
 
-
 .arrow {
   position: absolute;
-  right: -20px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -72,8 +70,8 @@
   cursor: pointer;
 
   img {
-    width: 42px;
     height: 42px;
+    object-fit: contain;
   }
 
   &:hover {

@@ -50,14 +50,15 @@ const Header: FC = () => {
             right: sidebar ? "0" : "-400px",
           }}
         >
-          <h1
-            className="logo"
-            onClick={() => {
-              router.push("/");
-              setSidebar(false);
-            }}
-          >
-            Restaurant
+          <h1 className="logo">
+            <p
+              onClick={() => {
+                router.push("/");
+                setSidebar(false);
+              }}
+            >
+              Restaurant
+            </p>
             <GoX className={scss.icon} onClick={() => setSidebar(false)} />
           </h1>
           <nav>
