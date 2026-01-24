@@ -3,12 +3,14 @@ import Main from "./mainMenu/Main";
 import Adress from "./visitRestaurant/Adress";
 import Interior from "./modern interior/Interior";
 import Flavors from "./aboutUs/About";
+import BestSellers from "./bestSellers/BestSellers";
 
 const Home = () => {
   return (
     <div>
       <Banner />
       <Flavors />
+      <BestSellers />
       <Main />
       <Interior />
       <Adress />
