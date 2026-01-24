@@ -286,6 +286,8 @@ const itemsCategory: Record<string, Item[]> = {
     {
       id: "FastFoods-5",
       name: "Onion Rings",
+      nameRu: "Луковые кольца",
+      nameKg: "Пияз шакекчеси",
       price: "$5",
       ingredients: ["Лук", "Мука", "Яйцо", "Сухари", "Масло", "Соус"],
       imageUrl:
@@ -317,7 +319,7 @@ const Menu: FC = () => {
         <img src="/blowLeft.svg" alt="" />
         <h1 className="subtitle">Menu</h1>
       </div>
-      <div className={scss.sidebar}>
+      <div className={scss.sidebar}>´
         {Object.keys(itemsCategory).map((item) => (
           <button
             key={item}
