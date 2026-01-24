@@ -1,25 +1,26 @@
 "use client";
 import React, { useState } from "react";
 import scss from "./BestSellers.module.scss";
+import { useTranslation } from "react-i18next";
 
 const images = [
-  "/Frame 19.svg",
-  "/Frame 421.svg",
-  "/Frame 20.svg",
-  "/Frame 422.svg",
-  "/Frame 421.svg",
+  "/image/Frame 19.svg",
+  "/image/Frame 421.svg",
+  "/image/Frame 20.svg",
+  "/image/Frame 422.svg",
+  "/image/Frame 421.svg",
+  "/image/Frame 20.svg",
 ];
 
 const BestSellers = () => {
+  const { t } = useTranslation("bestSellers");
   const [index, setIndex] = useState(2);
 
   const next = () => {
-    if (index < images.length - 2) {
-      setIndex(index + 1);
-    }
+    setIndex(index + 1);
   };
   const prev = () => {
-    setIndex(index - 1);
+    setIndex(2);
   };
 
   return (
@@ -27,11 +28,11 @@ const BestSellers = () => {
       <div className="container">
         <div className={scss.best__sellers__block}>
           <div className={scss.items__block}>
-            <div className={scss.best__sellers__item}>
-              <img src="/blowLeft.svg" alt="img" />
-              <h1>Best Sellers</h1>
+            <div className={scss.top}>
+              <img src="/image/blowLeft.svg" alt="img" />
+              <h1>{t("bestSellers")}</h1>
             </div>
-            <h1>You Only Reserve Exception</h1>
+            <h1>{t("title")}</h1>
             <p>
               Each location has a menu that`s curated just for them. See what
               new at your Cafesio and You`ll find Cafesio Covent Carden moments.
@@ -49,13 +50,21 @@ const BestSellers = () => {
                 </div>
               ))}
             </div>
-            {index! > images.length ? (
-              <button className={scss.arrow} onClick={next}>
-                <img src="/Frame 38.svg" alt="next" />
+            {index > images.length - 3 ? (
+              <button
+                className={scss.arrow}
+                onClick={prev}
+                style={{
+                  transform: "rotate(180deg) translate(-45%)",
+                  top: "45%",
+                  right: "40px",
+                }}
+              >
+                <img src="/image/Frame 38.svg" alt="next" />
               </button>
             ) : (
-              <button onClick={prev}>
-                <img src="/Frame 38.svg" alt="next" />
+              <button className={scss.arrow} onClick={next}>
+                <img src="/image/Frame 38.svg" alt="next" />
               </button>
             )}
           </div>

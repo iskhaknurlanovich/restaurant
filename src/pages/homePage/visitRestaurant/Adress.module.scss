@@ -12,10 +12,11 @@
       justify-content: space-between;
       gap: 30px;
       width: 100%;
-      max-width: 260px;
+      max-width: 360px;
       .top {
         display: flex;
         gap: 30px;
+        width: 100%;
       }
       h1 {
         font-size: clamp(1.875rem, 1.534rem + 1.7vw, 2.813rem);
@@ -23,7 +24,7 @@
         letter-spacing: -2;
         font-family: "Cormorant Garamond";
         width: 100%;
-        max-width: 250px;
+        max-width: 350px;
       }
       h3 {
         color: #ef272c;
@@ -36,6 +37,7 @@
         font-size: 17px;
         font-weight: 400;
         width: 100%;
+        max-width: 260px;
       }
       .timeWork,
       .neighborhood {

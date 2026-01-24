@@ -4,32 +4,31 @@ import scss from "./Banner.module.scss";
 import { FaArrowRight } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { FaPhoneFlip } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const Banner = () => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation("banner");
   return (
     <div className={scss.banner}>
       <div className={scss.backgroundImg}>
-        <img src="/banner.svg" alt="" />
+        <img src="/image/banner.svg" alt="" />
       </div>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.title}>
             <div className={scss.top}>
-              <img src="/blowLeft.svg" alt="" />
-              <h3 className="subtitle">Delicios</h3>
-              <img src="/blowRight.svg" alt="" />
+              <img src="/image/blowLeft.svg" alt="" />
+              <h3 className="subtitle">{t("delicios")}</h3>
+              <img src="/image/blowRight.svg" alt="" />
             </div>
-            <h1>Italian Cuisine</h1>
-            <p>
-              Classic steak & delicious with delightfully unexpected twists. The
-              Restaurants sunny decor was inspired by the diners
-            </p>
+            <h1>{t("title")}</h1>
+            <p>{t("description")} </p>
             <div className={scss.reserveBtn}>
               <span className={`${scss.line} ${scss.topLine}`}></span>
               <span className={`${scss.line} ${scss.bottomLine}`}></span>
               <button onClick={() => setOpen(!open)}>
-                Reserve Your Table <FaArrowRight fontSize={10} />
+                {t("btn")} <FaArrowRight fontSize={10} />
               </button>
             </div>
           </div>
@@ -43,33 +42,33 @@ const Banner = () => {
             <div className={scss.modalName}>
               <img src="/Group 2.svg" alt="" />
               <div className={scss.inputField}>
-                <p>NAME</p>
-                <input type="text" placeholder="Enter your name" />
+                <p>{t("modal.name.text")}</p>
+                <input type="text" placeholder={t("modal.name.input")} />
               </div>
             </div>
             <div className={scss.modalPhone}>
               <img src="/Group 1.svg" alt="" />
               <div className={scss.inputField}>
-                <p>PHONE</p>
-                <input type="number" placeholder="Enter your phone" />
+                <p>{t("modal.phone.text")}</p>
+                <input type="number" placeholder={t("modal.phone.input")} />
               </div>
             </div>
-            <button onClick={() => setOpen(!open)}>Сontact</button>
+            <button onClick={() => setOpen(!open)}>{t("modal.textBtn")}</button>
           </div>
 
           <div className={scss.bottomGroup}>
             <div className={scss.location}>
-              <h5>Location</h5>
+              <h5>{t("location.text")}</h5>
               <div className={scss.line}></div>
               <CiLocationOn className={scss.icon} />
-              <p>Rua da moeda 1g,1200-275,Portugal</p>
+              <p>{t("location.info")}</p>
             </div>
 
             <div className={scss.hotline}>
-              <h5>Hotline</h5>
+              <h5>{t("hotline.text")}</h5>
               <div className={scss.line}></div>
               <FaPhoneFlip className={scss.icon} />
-              <p>+771219900</p>
+              <p>{t("hotline.info")}</p>
             </div>
           </div>
         </div>

@@ -11,7 +11,6 @@
       width: 100%;
       min-width: 100vw;
       height: 100%;
-      // min-height: 70vh;
       object-fit: cover;
       object-position: bottom;
     }
@@ -21,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
+    min-height: 95vh;
     position: relative;
 
     .title {
@@ -30,19 +29,22 @@
       align-items: center;
       gap: 10px;
       width: 100%;
-      max-width: 400px;
+      max-width: 430px;
       text-align: center;
       .top {
         display: flex;
         gap: 30px;
         margin-block-end: -10px;
+        filter: drop-shadow(0 0 5px black);
       }
       h1 {
         font-size: clamp(2.313rem, 1.949rem + 1.82vw, 3.313rem);
         font-family: "Cormorant Garamond";
         font-weight: 700;
+        filter: drop-shadow(0 0 5px black);
       }
       p {
+        filter: drop-shadow(0 0 5px black);
         font-weight: 300;
         line-height: 1.2;
       }
@@ -117,6 +119,14 @@
       }
       .location {
         width: 100%;
+        max-width: 600px;
+      }
+      .hotline {
+        width: 100%;
+        max-width: 400px;
+        h5 {
+          width: 120%;
+        }
       }
     }
     .modal {
@@ -210,6 +220,7 @@
           }
         }
         .hotline {
+          width: 30%;
           h5,
           p {
             align-self: end;

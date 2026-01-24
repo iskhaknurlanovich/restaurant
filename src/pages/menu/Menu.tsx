@@ -314,7 +314,7 @@ const Menu: FC = () => {
         <FaArrowLeft />
       </button>
       <div className={scss.top}>
-        <img src="/blowLeft.svg" alt="" />
+        <img src="/image/blowLeft.svg" alt="" />
         <h1 className="subtitle">Menu</h1>
       </div>
       <div className={scss.sidebar}>

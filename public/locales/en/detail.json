@@ -1,0 +1,14 @@
+{
+  "simtext": "Similar gueries",
+  "btnText": "Menu",
+  "extras": "Extras",
+  "drinks": "Drinks",
+  "categories": {
+    "c1": "Desserts",
+    "c2": "Hot Drinks",
+    "c3": "Cold Drinks",
+    "c4": "National Drinks",
+    "c5": "Eastern Cuisine",
+    "c6": "Fast Foods"
+  }
+}

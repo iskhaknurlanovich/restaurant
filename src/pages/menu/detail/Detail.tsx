@@ -4,9 +4,11 @@ import scss from "./Detail.module.scss";
 import { useParams, useRouter } from "next/navigation";
 import { Item } from "@/src/shared/ui/menuSlider/Slider";
 import { FaArrowLeft } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Detail: FC = () => {
   const { id }: any = useParams();
+  const { t } = useTranslation("detail");
   const router = useRouter();
   const itemsCategory: Record<string, Item[]> = {
     Desserts: [
@@ -346,19 +348,19 @@ const Detail: FC = () => {
   );
 
   const switchData = [
-    "Deserts",
-    "HotDrinks",
-    "ColdDrinks",
-    "NationalFoods",
-    "EasternCuisine",
-    "FastFoods",
+    t("categories.c1"),
+    t("categories.c2"),
+    t("categories.c3"),
+    t("categories.c4"),
+    t("categories.c5"),
+    t("categories.c6"),
   ];
   return (
     <section className={scss.detail}>
       <div className="container">
         <div className={scss.content}>
           <button onClick={() => router.push("/menu")} className={scss.backBtn}>
-            <FaArrowLeft fontSize={12} /> Menu
+            <FaArrowLeft fontSize={12} /> {t("btnText")}
           </button>
           <div className={scss.sidebar}>
             {switchData.map((item) => (
@@ -387,7 +389,7 @@ const Detail: FC = () => {
                 <div className={scss.additionaly}>
                   <span className={scss.category}>{currentCategory}</span>
                   <div className={scss.extras}>
-                    <h3>Extras</h3>
+                    <h3>{t("extras")}</h3>
                     {extras.map((item, idx) => (
                       <p key={idx}>
                         {item.name} <span>{item.price}</span>
@@ -395,7 +397,7 @@ const Detail: FC = () => {
                     ))}
                   </div>
                   <div className={scss.drinks}>
-                    <h3>Drinks</h3>
+                    <h3>{t("drinks")}</h3>
                     {drinks.map((item, idx) => (
                       <p key={idx}>
                         {item.name} <span>{item.price}</span>
@@ -410,7 +412,7 @@ const Detail: FC = () => {
               </div>
             )}
             <div className={scss.similarProducts}>
-              <h1>Similar gueries</h1>
+              <h1>{t("simtext")}</h1>
               <div className={scss.menuList}>
                 {currentCategory &&
                   itemsCategory[currentCategory]
