@@ -1,3 +1,41 @@
+export interface Extra {
+  name: string;
+  nameRu: string;
+  nameKg: string;
+  price: string;
+}
+
+export interface Drink {
+  name: string;
+  nameRu: string;
+  nameKg: string;
+  price: string;
+}
+export const extras: Extra[] = [
+  { name: "Cherry", nameRu: "Вишня", nameKg: "Алча", price: "$0.90" },
+  {
+    name: "Whipped Cream",
+    nameRu: "Взбитые сливки",
+    nameKg: "Камкаймак",
+    price: "$0.50",
+  },
+];
+
+export const drinks: Drink[] = [
+  {
+    name: "Coca Cola",
+    nameRu: "Кока Кола",
+    nameKg: "Кока Кола",
+    price: "$0.90",
+  },
+  {
+    name: "Iced Tea",
+    nameRu: "Холодный чай",
+    nameKg: "Муздак Чай",
+    price: "$1.20",
+  },
+];
+
 export type Item = {
   id: string;
   name: string;

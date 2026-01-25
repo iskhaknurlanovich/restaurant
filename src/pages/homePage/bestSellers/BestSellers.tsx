@@ -16,13 +16,16 @@ const BestSellers = () => {
   const { t } = useTranslation("bestSellers");
   const [index, setIndex] = useState(2);
 
-  const next = () => {
-    setIndex(index + 1);
-  };
   const prev = () => {
     setIndex(2);
   };
-
+  const next = () => {
+    if (window.innerWidth <= 624) {
+      setIndex(index + 2);
+    } else {
+      setIndex(index + 1);
+    }
+  };
   return (
     <div className={scss.best__sellers}>
       <div className="container">
@@ -50,15 +53,25 @@ const BestSellers = () => {
                 </div>
               ))}
             </div>
-            {index > images.length - 3 ? (
+            {window.innerWidth >= 630 ? (
+              index > images.length - 3 ? (
+                <button
+                  className={`${scss.arrow} ${scss.backBtn}`}
+                  onClick={prev}
+                  style={{ transform: "rotate(180deg)" }}
+                >
+                  <img src="/image/Frame 38.svg" alt="next" />
+                </button>
+              ) : (
+                <button className={scss.arrow} onClick={next}>
+                  <img src="/image/Frame 38.svg" alt="next" />
+                </button>
+              )
+            ) : index > images.length ? (
               <button
-                className={scss.arrow}
+                className={`${scss.arrow} ${scss.backBtn}`}
                 onClick={prev}
-                style={{
-                  transform: "rotate(180deg) translate(-45%)",
-                  top: "45%",
-                  right: "40px",
-                }}
+                style={{ transform: "rotate(180deg)" }}
               >
                 <img src="/image/Frame 38.svg" alt="next" />
               </button>

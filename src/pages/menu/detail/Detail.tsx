@@ -4,21 +4,14 @@ import scss from "./Detail.module.scss";
 import { useParams, useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { Item, itemsCategory } from "@/src/shared/backend";
-
-interface Extra {
-  name: string;
-  nameRu: string;
-  nameKg: string;
-  price: string;
-}
-
-interface Drink {
-  name: string;
-  nameRu: string;
-  nameKg: string;
-  price: string;
-}
+import {
+  Drink,
+  drinks,
+  Extra,
+  extras,
+  Item,
+  itemsCategory,
+} from "@/src/shared/backend";
 
 const Detail: FC = () => {
   const params = useParams();
@@ -30,31 +23,6 @@ const Detail: FC = () => {
   }, []);
   const { t } = useTranslation("detail");
   const router = useRouter();
-
-  const extras: Extra[] = [
-    { name: "Cherry", nameRu: "Вишня", nameKg: "Алча", price: "$0.90" },
-    {
-      name: "Whipped Cream",
-      nameRu: "Взбитые сливки",
-      nameKg: "Камкаймак",
-      price: "$0.50",
-    },
-  ];
-
-  const drinks: Drink[] = [
-    {
-      name: "Coca Cola",
-      nameRu: "Кока Кола",
-      nameKg: "Кока Кола",
-      price: "$0.90",
-    },
-    {
-      name: "Iced Tea",
-      nameRu: "Холодный чай",
-      nameKg: "Муздак Чай",
-      price: "$1.20",
-    },
-  ];
 
   let currentItem: Item | null = null;
   for (const i in itemsCategory) {
