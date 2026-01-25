@@ -67,7 +67,7 @@
 
 .arrow {
   position: absolute;
-  right: 30px;
+  right: 40px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -78,13 +78,12 @@
     height: 42px;
     object-fit: contain;
   }
-
-  &:hover {
-    transform: translateY(-50%) scale(1.1);
-  }
 }
-
-/* ===== RESPONSIVE ===== */
+.backBtn {
+  right: 40px;
+  top: 45%;
+  transform: translateY(-50%);
+}
 
 @media (max-width: 1024px) {
   .best__sellers__block {
@@ -99,6 +98,16 @@
 
 @media (max-width: 600px) {
   .slide {
-    min-width: 100%; // 👈 мобайлда 1 сүрөт
+    min-width: 100%;
+  }
+  .arrow {
+    top: 70%;
+    transform: translateY(-50%);
+    right: 10px;
+  }
+  .backBtn {
+    top: 67%;
+    transform: rotate(180deg);
+    right: 10px;
   }
 }
