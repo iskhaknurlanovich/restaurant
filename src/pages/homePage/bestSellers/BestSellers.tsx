@@ -20,7 +20,7 @@ const BestSellers = () => {
     setIndex(2);
   };
   const next = () => {
-    if (window.innerWidth <= 624) {
+    if (window.innerWidth <= 1024) {
       setIndex(index + 2);
     } else {
       setIndex(index + 1);
@@ -53,7 +53,7 @@ const BestSellers = () => {
                 </div>
               ))}
             </div>
-            {window.innerWidth >= 630 ? (
+            {window.innerWidth >= 1000 ? (
               index > images.length - 3 ? (
                 <button
                   className={`${scss.arrow} ${scss.backBtn}`}
