@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import scss from "./BestSellers.module.scss";
 import { useTranslation } from "react-i18next";
 
@@ -15,12 +15,17 @@ const images = [
 const BestSellers = () => {
   const { t } = useTranslation("bestSellers");
   const [index, setIndex] = useState(2);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const prev = () => {
     setIndex(2);
   };
   const next = () => {
-    if (window.innerWidth <= 1024) {
+    if (typeof window !== "undefined" && window.innerWidth <= 1024) {
       setIndex(index + 2);
     } else {
       setIndex(index + 1);
@@ -53,7 +58,9 @@ const BestSellers = () => {
                 </div>
               ))}
             </div>
-            {window.innerWidth >= 1000 ? (
+            {isMounted &&
+            typeof window !== "undefined" &&
+            window.innerWidth >= 1000 ? (
               index > images.length - 3 ? (
                 <button
                   className={`${scss.arrow} ${scss.backBtn}`}
@@ -67,7 +74,7 @@ const BestSellers = () => {
                   <img src="/image/Frame 38.svg" alt="next" />
                 </button>
               )
-            ) : index > images.length ? (
+            ) : isMounted && index > images.length ? (
               <button
                 className={`${scss.arrow} ${scss.backBtn}`}
                 onClick={prev}
